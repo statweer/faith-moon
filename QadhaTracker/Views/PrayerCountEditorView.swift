@@ -64,8 +64,14 @@ struct PrayerCountEditor_Previews: PreviewProvider {
 }
 
 struct RangeIntegerStrategy: ParseStrategy {
+	private static var numberFormatter: NumberFormatter = {
+		let formatter = NumberFormatter()
+		formatter.numberStyle = .none
+		return formatter
+	}()
+
 	func parse(_ value: String) throws -> Int {
-		return Int(value) ?? 0
+		return Self.numberFormatter.number(from: value)?.intValue ?? 0
 	}
 }
 
@@ -75,7 +81,7 @@ struct RangeIntegerStyle: ParseableFormatStyle {
 
 	func format(_ value: Int) -> String {
 		let constrainedValue = min(max(value, range.lowerBound), range.upperBound)
-		return "\(constrainedValue)"
+		return constrainedValue.formatted(.number.locale(Locale(identifier: "en_US")))
 	}
 }
 

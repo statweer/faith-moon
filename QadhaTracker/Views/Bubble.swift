@@ -57,6 +57,7 @@ struct BubbleView<Content: View>: View {
 							.font(.system(size: 22, weight: .bold, design: .monospaced))
 							.foregroundColor(.white)
 							.minimumScaleFactor(0.5)
+							.environment(\.locale, Locale(identifier: "en_US"))
 					}
 					.shadow(color: .black.opacity(0.5), radius: 10)
 			}
