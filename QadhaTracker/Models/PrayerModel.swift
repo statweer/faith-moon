@@ -61,7 +61,7 @@ extension PrayerModel {
 				intrinsicOrder: 4
 			),
 			.init(
-				localizationKey: "Fast",
+				localizationKey: "Ramadan Fast",
 				systemImage: "sparkles",
 				intrinsicOrder: 5
 			)

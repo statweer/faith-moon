@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3072F13729EB809600E47B7F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072F13629EB809600E47B7F /* View+Extensions.swift */; };
 		3072F13929EB80C300E47B7F /* HostingWindowFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072F13829EB80C300E47B7F /* HostingWindowFinder.swift */; };
+		3072F13D29EB903200E47B7F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3072F13F29EB903200E47B7F /* Localizable.strings */; };
+		3072F14429EB962600E47B7F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3072F14329EB962600E47B7F /* Settings.bundle */; };
 		30A0F44F29EB793400FDA04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A0F44A29EB793400FDA04E /* Assets.xcassets */; };
 		30A0F45029EB793400FDA04E /* QadhaTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F44B29EB793400FDA04E /* QadhaTrackerApp.swift */; };
 		30A0F45129EB793400FDA04E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A0F44D29EB793400FDA04E /* Preview Assets.xcassets */; };
@@ -29,6 +31,11 @@
 /* Begin PBXFileReference section */
 		3072F13629EB809600E47B7F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		3072F13829EB80C300E47B7F /* HostingWindowFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingWindowFinder.swift; sourceTree = "<group>"; };
+		3072F13E29EB903200E47B7F /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3072F14029EB903900E47B7F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3072F14129EB903E00E47B7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3072F14229EB903F00E47B7F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3072F14329EB962600E47B7F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		30A0F43629EB77E600FDA04E /* QadhaTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QadhaTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A0F44929EB793400FDA04E /* QadhaTracker.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = QadhaTracker.entitlements; sourceTree = "<group>"; };
 		30A0F44A29EB793400FDA04E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +145,8 @@
 				30A0F46D29EB7CC400FDA04E /* Info.plist */,
 				30A0F44A29EB793400FDA04E /* Assets.xcassets */,
 				30A0F44C29EB793400FDA04E /* Preview Content */,
+				3072F13F29EB903200E47B7F /* Localizable.strings */,
+				3072F14329EB962600E47B7F /* Settings.bundle */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -172,6 +181,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = "Saeed Tatweer IT Services Est.";
 				TargetAttributes = {
 					30A0F43529EB77E600FDA04E = {
 						CreatedOnToolsVersion = 14.3;
@@ -185,6 +195,9 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				fa,
+				tr,
 			);
 			mainGroup = 30A0F42D29EB77E600FDA04E;
 			productRefGroup = 30A0F43729EB77E600FDA04E /* Products */;
@@ -201,7 +214,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3072F14429EB962600E47B7F /* Settings.bundle in Resources */,
 				30A0F45129EB793400FDA04E /* Preview Assets.xcassets in Resources */,
+				3072F13D29EB903200E47B7F /* Localizable.strings in Resources */,
 				30A0F44F29EB793400FDA04E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +269,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3072F13F29EB903200E47B7F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3072F13E29EB903200E47B7F /* fa */,
+				3072F14029EB903900E47B7F /* ar */,
+				3072F14129EB903E00E47B7F /* en */,
+				3072F14229EB903F00E47B7F /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		30A0F44329EB77E700FDA04E /* Debug */ = {
@@ -384,6 +413,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "QadhaTracker/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Qadha Tracker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -426,6 +457,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "QadhaTracker/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Qadha Tracker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

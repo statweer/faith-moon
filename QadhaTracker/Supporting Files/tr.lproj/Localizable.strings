@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  QadhaTracker
+
+  Created by Saeed Taheri on 4/16/23.
+  Copyright © 2023 Saeed Tatweer IT Services Est. All rights reserved.
+*/
+
+"Qadha Tracker" = "Kaza İzleyici";
+
+"Fajr" = "Fecir";
+"Dhuhr" = "Öğle";
+"Asr" = "İkindi";
+"Maghrib" = "Akşam";
+"Isha" = "Yatsı";
+"Ramadan Fast" = "Ramazan Orucu";
+"Fast" = "Ramazan Orucu";
+
+"Sort" = "Sırala";
+"Default" = "Varsayılan";
+"Ascending" = "Artan";
+"Descending" = "Azalan";
