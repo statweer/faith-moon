@@ -2,6 +2,8 @@
 
 Qadha Tracker is an iOS app built using SwiftUI that allows Muslim users to track their Qadha prayers and fasts. With Qadha Tracker, users can easily enter how many prayers and fasts they have missed, and the app will keep track of their progress over time.
 
+![Monday, 17 Apr 2023 03:44:28](https://user-images.githubusercontent.com/57771530/232350408-63f8462d-9cbf-418a-a1b1-925837e0af58.png)
+
 ## Features
 
 - Track missed Qadha prayers and fasts
