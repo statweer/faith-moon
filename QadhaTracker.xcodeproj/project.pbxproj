@@ -42,7 +42,7 @@
 		30A0F44B29EB793400FDA04E /* QadhaTrackerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QadhaTrackerApp.swift; sourceTree = "<group>"; };
 		30A0F44D29EB793400FDA04E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30A0F45529EB7C9300FDA04E /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		30A0F45629EB7C9300FDA04E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../../../Library/Mobile Documents/iCloud~com~apple~Playgrounds/Documents/Qadha Tracker.swiftpm/ContentView.swift"; sourceTree = "<group>"; };
+		30A0F45629EB7C9300FDA04E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		30A0F45729EB7C9300FDA04E /* SizePreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizePreference.swift; sourceTree = "<group>"; };
 		30A0F45829EB7C9300FDA04E /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		30A0F45929EB7C9300FDA04E /* PrayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerModel.swift; sourceTree = "<group>"; };

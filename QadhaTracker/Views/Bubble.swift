@@ -68,6 +68,7 @@ struct BubbleView<Content: View>: View {
 					.shadow(color: .black.opacity(0.5), radius: 8)
 			}
 		}
+		.buttonStyle(.borderless)
 		.contentShape(
 			.hoverEffect,
 			RoundedRectangle(
