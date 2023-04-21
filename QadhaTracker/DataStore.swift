@@ -11,9 +11,9 @@ final class DataStore: ObservableObject {
 		)
 	}
 
-	private let userDefaults = UserDefaults.standard
+	private let userDefaults: UserDefaults
 
-	@Published var data: [PrayerModel]
+	@Published var data: [PrayerModel] = PrayerModel.defaultValues
 	@Published var scales: [PrayerModel.ID: CGFloat] = [:]
 	@Published var sortType: SortType {
 		didSet {
@@ -25,20 +25,23 @@ final class DataStore: ObservableObject {
 
 	@Published private(set) var sortedData: [PrayerModel] = []
 
+	private let cloudStorage: CloudStorage
 	private var cancellables: Set<AnyCancellable> = []
 
-	init() {
+	init(
+		userDefaults: UserDefaults = UserDefaults.standard,
+		cloudStorage: CloudStorage = NSUbiquitousKeyValueStore.default
+	) {
+		self.userDefaults = userDefaults
+		self.cloudStorage = cloudStorage
+
 		if let sortStr = userDefaults.string(forKey: UserDefaultsKey.sortType.value) {
 			sortType = SortType(rawValue: sortStr) ?? .default
 		} else {
 			sortType = .default
 		}
 
-		if let dataStr = userDefaults.string(forKey: UserDefaultsKey.data.value) {
-			data = [PrayerModel].decode(using: dataStr) ?? PrayerModel.defaultValues
-		} else {
-			data = PrayerModel.defaultValues
-		}
+		syncWithCloudStorage()
 
 		sortedData = sort(data, basedOn: sortType)
 
@@ -47,10 +50,7 @@ final class DataStore: ObservableObject {
 		$data.sink { [weak self] newValue in
 			guard let self else { return }
 
-			userDefaults.set(
-				newValue.toJSONString(),
-				forKey: UserDefaultsKey.data.value
-			)
+			save(newValue.toJSONString())
 
 			withAnimation(Defaults.springAnimation) { [unowned self] in
 				self.sortedData = self.sort(self.data, basedOn: self.sortType)
@@ -58,6 +58,18 @@ final class DataStore: ObservableObject {
 			}
 		}
 		.store(in: &cancellables)
+
+		cloudStorage
+			.publisher(for: UserDefaultsKey.data.value)
+			.debounce(for: .milliseconds(300), scheduler: RunLoop.main)
+			.sink { [weak self] newValue in
+				if let cloudData = newValue {
+					if let newModels = [PrayerModel].decode(using: cloudData) {
+						self?.data = newModels
+					}
+				}
+			}
+			.store(in: &cancellables)
 
 		$sortType.sink { [weak self] newValue in
 			guard let self else { return }
@@ -72,6 +84,50 @@ final class DataStore: ObservableObject {
 			}
 		}
 		.store(in: &cancellables)
+	}
+
+	private func syncWithCloudStorage() {
+		let cloudTimestamp: Date = cloudStorage.value(for: UserDefaultsKey.timestamp.value) ?? .distantPast
+		let localTimestamp: Date = userDefaults
+			.value(forKey: UserDefaultsKey.timestamp.value) as? Date ?? .distantPast
+
+		if
+			let cloudData: String = cloudStorage
+				.value(for: UserDefaultsKey.data.value),
+			!cloudData.isEmpty,
+			cloudTimestamp >= localTimestamp {
+			// Update UserDefaults with the cloud value and timestamp
+			userDefaults.set(cloudData, forKey: UserDefaultsKey.data.value)
+			userDefaults.set(cloudTimestamp, forKey: UserDefaultsKey.timestamp.value)
+
+			let models = [PrayerModel].decode(using: cloudData) ?? []
+			if models.isEmpty {
+				data = PrayerModel.defaultValues
+			} else {
+				data = models
+			}
+		} else if let localData: String = userDefaults
+			.string(forKey: UserDefaultsKey.data.value), localTimestamp > cloudTimestamp {
+			// Update cloud storage with the local value and timestamp
+			cloudStorage.set(localData, forKey: UserDefaultsKey.data.value)
+			cloudStorage.set(localTimestamp, forKey: UserDefaultsKey.timestamp.value)
+			cloudStorage.synchronize()
+		}
+	}
+
+	private func save(_ data: String?) {
+		guard let data else {
+			return
+		}
+
+		let now = Date()
+
+		userDefaults.set(data, forKey: UserDefaultsKey.data.value)
+		userDefaults.set(now, forKey: UserDefaultsKey.timestamp.value)
+
+		cloudStorage.set(data, forKey: UserDefaultsKey.data.value)
+		cloudStorage.set(now, forKey: UserDefaultsKey.timestamp.value)
+		cloudStorage.synchronize()
 	}
 
 	private func sort(
