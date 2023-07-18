@@ -185,7 +185,8 @@ final class DataStore {
 		let totalScales = Int(scales.values.reduce(0, +).rounded(.down))
 
 		switch width {
-		case 0..<375: return 2
+    case 0..<250: return 1
+		case 250..<375: return 2
 		case 375..<750: return min(2, max(9 - totalScales, 2))
 		case 750..<1024: return min(3, max(10 - totalScales, 3))
 		case 1024..<1500: return min(4, max(11 - totalScales, 4))

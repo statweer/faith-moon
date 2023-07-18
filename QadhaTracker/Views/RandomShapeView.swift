@@ -1,6 +1,7 @@
 import SwiftUI
 import Combine
 
+#if os(iOS)
 struct RandomShapeView: View {
 	@State private var size: CGSize = UIScreen.main.bounds.size
 	private let sizePublisher = PassthroughSubject<CGSize, Never>()
@@ -138,12 +139,15 @@ struct RandomShapeView: View {
 	}
 }
 
-private extension View {
-	func erasedToAnyView() -> AnyView {
-		AnyView(self)
-	}
-}
-
 #Preview {
   RandomShapeView()
+}
+
+#endif
+
+
+private extension View {
+  func erasedToAnyView() -> AnyView {
+    AnyView(self)
+  }
 }

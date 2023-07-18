@@ -18,11 +18,3 @@ extension View {
 		.onPreferenceChange(SizePreferenceKey.self, perform: onChange)
 	}
 }
-
-extension View {
-	func withHostingWindow(_ callback: @escaping (UIWindow?) -> Void) -> some View {
-		self.background(
-			HostingWindowFinder(callback: callback)
-		)
-	}
-}

@@ -12,16 +12,8 @@ struct QadhaTrackerApp: App {
 	var body: some Scene {
 		WindowGroup {
 			ContentView()
-				.tint(Color("AccentColor"))
+        .tint(Color(.accent))
 				.dynamicTypeSize(...DynamicTypeSize.accessibility1)
-			#if targetEnvironment(macCatalyst)
-				.withHostingWindow { window in
-					if let titlebar = window?.windowScene?.titlebar {
-						titlebar.titleVisibility = .hidden
-						titlebar.toolbar = nil
-					}
-				}
-			#endif
 		}
 	}
 

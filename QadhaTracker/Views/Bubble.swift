@@ -69,30 +69,30 @@ struct BubbleView<Content: View>: View {
 		}
     .sensoryFeedback(.selection, trigger: isShowingStepper)
 		.buttonStyle(.borderless)
-		.contentShape(
-			.hoverEffect,
-			RoundedRectangle(
-				cornerRadius: 16.0,
-				style: .continuous
-			)
-		)
-		.hoverEffect(.lift)
-		.popover(isPresented: $isShowingStepper) {
-			VStack {
-				PrayerCountEditorView(value: $count) {
-					label()
-						.foregroundColor(.primary)
-				}
-				Spacer()
-			}
-			.padding()
-			.presentationDetents([.fraction(0.2)])
-			.presentationCornerRadius(20)
-			.presentationDragIndicator(.visible)
-			.presentationBackgroundInteraction(.enabled)
-			.presentationBackground(.thickMaterial)
-			.presentationCompactAdaptation(.sheet)
-		}
+//		.contentShape(
+//			.hoverEffect,
+//			RoundedRectangle(
+//				cornerRadius: 16.0,
+//				style: .continuous
+//			)
+//		)
+//		.hoverEffect(.lift)
+//		.popover(isPresented: $isShowingStepper) {
+//			VStack {
+//				PrayerCountEditorView(value: $count) {
+//					label()
+//						.foregroundColor(.primary)
+//				}
+//				Spacer()
+//			}
+//			.padding()
+//			.presentationDetents([.fraction(0.2)])
+//			.presentationCornerRadius(20)
+//			.presentationDragIndicator(.visible)
+//			.presentationBackgroundInteraction(.enabled)
+//			.presentationBackground(.thickMaterial)
+//			.presentationCompactAdaptation(.sheet)
+//		}
 	}
 
 	private func colorForScale() -> Color {

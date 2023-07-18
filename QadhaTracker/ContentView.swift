@@ -11,10 +11,12 @@ struct ContentView: View {
 		NavigationStack {
 			GeometryReader { proxy in
 				ZStack {
+#if os(iOS)
 					if !isReduceTransparencyEnabled {
 						RandomShapeView()
 							.edgesIgnoringSafeArea(.all)
 					}
+#endif
 
 					ScrollView {
 						MasonryLayout(
@@ -42,9 +44,9 @@ struct ContentView: View {
 					isSortMenuOnScreen = false
 				}
 			}
-			.toolbar {
-				toolbar
-			}
+//			.toolbar {
+//				toolbar
+//			}
 			.navigationTitle("Qadha Tracker")
 			.onChange(of: dataStore.sortType) {
 				isSortMenuOnScreen = false
@@ -52,42 +54,42 @@ struct ContentView: View {
 		}
 	}
 
-	@ToolbarContentBuilder private var toolbar: some ToolbarContent {
-		ToolbarItem(placement: .automatic) {
-			Menu {
-				Picker(
-					"Sort",
-					selection: $dataStore.sortType
-				) {
-					Label(
-						"Default",
-						systemImage: "arrow.triangle.2.circlepath"
-					)
-					.tag(SortType.default)
-
-					Label(
-						"Ascending",
-						systemImage: "text.line.last.and.arrowtriangle.forward"
-					)
-					.tag(SortType.ascending)
-
-					Label(
-						"Descending",
-						systemImage: "text.line.first.and.arrowtriangle.forward"
-					)
-					.tag(SortType.descending)
-				}
-				.pickerStyle(.inline)
-        .sensoryFeedback(.levelChange, trigger: dataStore.sortType)
-			} label: {
-				Label(
-					"Sort",
-					systemImage: "arrow.up.arrow.down.circle"
-				)
-			}
-			.onTapGesture {
-				isSortMenuOnScreen = true
-			}
-		}
-	}
+//	@ToolbarContentBuilder private var toolbar: some ToolbarContent {
+//		ToolbarItem(placement: .automatic) {
+//			Menu {
+//				Picker(
+//					"Sort",
+//					selection: $dataStore.sortType
+//				) {
+//					Label(
+//						"Default",
+//						systemImage: "arrow.triangle.2.circlepath"
+//					)
+//					.tag(SortType.default)
+//
+//					Label(
+//						"Ascending",
+//						systemImage: "text.line.last.and.arrowtriangle.forward"
+//					)
+//					.tag(SortType.ascending)
+//
+//					Label(
+//						"Descending",
+//						systemImage: "text.line.first.and.arrowtriangle.forward"
+//					)
+//					.tag(SortType.descending)
+//				}
+//				.pickerStyle(.inline)
+//        .sensoryFeedback(.levelChange, trigger: dataStore.sortType)
+//			} label: {
+//				Label(
+//					"Sort",
+//					systemImage: "arrow.up.arrow.down.circle"
+//				)
+//			}
+//			.onTapGesture {
+//				isSortMenuOnScreen = true
+//			}
+//		}
+//	}
 }

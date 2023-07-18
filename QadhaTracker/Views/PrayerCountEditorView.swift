@@ -25,8 +25,8 @@ struct PrayerCountEditorView<Content: View>: View {
 						.buttonBorderShape(.automatic)
 						.containerShape(Rectangle())
 				}
-				.contentShape(.hoverEffect, Circle())
-				.hoverEffect()
+//				.contentShape(.hoverEffect, Circle())
+//				.hoverEffect()
 			}
 			.padding(.trailing, -8.0)
 
@@ -39,15 +39,15 @@ struct PrayerCountEditorView<Content: View>: View {
 					EmptyView()
 				}
 				.focused($isFocused)
-				.keyboardType(.asciiCapableNumberPad)
+//				.keyboardType(.asciiCapableNumberPad)
 				.font(.title3.monospaced().bold())
-				.textFieldStyle(.roundedBorder)
+//				.textFieldStyle(.roundedBorder)
 				.onSubmit {
 					isFocused = false
 				}
 			} onEditingChanged: { success in
 				if success {
-					UIImpactFeedbackGenerator(style: .light).impactOccurred()
+//					UIImpactFeedbackGenerator(style: .light).impactOccurred()
 				}
 			}
 		}
