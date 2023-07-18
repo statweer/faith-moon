@@ -111,7 +111,7 @@ private struct BubblePreview: View {
 			scale: $scale,
 			count: $count
 		) {
-			Label("مغرب", systemImage: "sunrise")
+			Label("Maghrib", systemImage: "sunrise")
 				.padding(12)
 				.font(.system(.title3, design: .rounded, weight: .medium))
 				.shadow(color: .black.opacity(0.5), radius: 8)

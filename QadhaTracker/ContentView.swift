@@ -4,7 +4,8 @@ struct ContentView: View {
 	@StateObject private var dataStore = DataStore()
 	@State private var isSortMenuOnScreen = false
 
-	@Environment(\.accessibilityReduceTransparency) private var isReduceTransparencyEnabled
+	@Environment(\.accessibilityReduceTransparency)
+  private var isReduceTransparencyEnabled
 
 	var body: some View {
 		NavigationStack {

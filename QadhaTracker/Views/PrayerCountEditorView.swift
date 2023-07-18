@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct PrayerCountEditorView<Content: View>: View {
-	@Environment(\.dismiss) private var dismiss
-	@FocusState private var isFocused
+	@Environment(\.dismiss)
+  private var dismiss
+
+  @FocusState private var isFocused
 
 	@Binding var value: Int
 	var title: () -> Content

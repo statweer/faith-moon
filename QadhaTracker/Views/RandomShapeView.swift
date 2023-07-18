@@ -7,7 +7,8 @@ struct RandomShapeView: View {
 
 	@State private var shapeViews: [(AnyView, UUID)] = []
 
-	@Environment(\.colorScheme) private var colorScheme
+	@Environment(\.colorScheme)
+  private var colorScheme
 
 	var body: some View {
 		ZStack {
