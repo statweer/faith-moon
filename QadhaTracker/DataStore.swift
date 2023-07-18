@@ -1,29 +1,44 @@
 import Foundation
 import Combine
+import Observation
 import SwiftUI
 
-final class DataStore: ObservableObject {
+@Observable
+final class DataStore {
 	private enum Defaults {
-		static let springAnimation = Animation.spring(
-			response: 0.4,
-			dampingFraction: 0.6,
-			blendDuration: 0.2
-		)
+    static let springAnimation = Animation.bouncy(extraBounce: 0.1)
 	}
 
 	private let userDefaults: UserDefaults
 
-	@Published var data: [PrayerModel] = PrayerModel.defaultValues
-	@Published var scales: [PrayerModel.ID: CGFloat] = [:]
-	@Published var sortType: SortType {
+  var data: [PrayerModel] = PrayerModel.defaultValues {
+    didSet {
+      save(data.toJSONString())
+
+      withAnimation(Defaults.springAnimation) {
+        self.sortedData = self.sort(data, basedOn: sortType)
+        self.scales = self.calculateScales(basedOn: data)
+      }
+    }
+  }
+
+	var scales: [PrayerModel.ID: CGFloat] = [:]
+	var sortType: SortType {
 		didSet {
 			if sortType != oldValue {
-				UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+        userDefaults.set(
+          sortType.rawValue,
+          forKey: UserDefaultsKey.sortType.value
+        )
+
+        withAnimation(Defaults.springAnimation) {
+          self.sortedData = self.sort(data, basedOn: sortType)
+        }
 			}
 		}
 	}
 
-	@Published private(set) var sortedData: [PrayerModel] = []
+	private(set) var sortedData: [PrayerModel] = []
 
 	private let cloudStorage: CloudStorage
 	private var cancellables: Set<AnyCancellable> = []
@@ -47,18 +62,6 @@ final class DataStore: ObservableObject {
 
 		scales = calculateScales(basedOn: data)
 
-		$data.sink { [weak self] newValue in
-			guard let self else { return }
-
-			save(newValue.toJSONString())
-
-			withAnimation(Defaults.springAnimation) { [unowned self] in
-				self.sortedData = self.sort(self.data, basedOn: self.sortType)
-				self.scales = self.calculateScales(basedOn: newValue)
-			}
-		}
-		.store(in: &cancellables)
-
 		cloudStorage
 			.publisher(for: UserDefaultsKey.data.value)
 			.debounce(for: .milliseconds(300), scheduler: RunLoop.main)
@@ -70,23 +73,9 @@ final class DataStore: ObservableObject {
 				}
 			}
 			.store(in: &cancellables)
-
-		$sortType.sink { [weak self] newValue in
-			guard let self else { return }
-
-			userDefaults.set(
-				newValue.rawValue,
-				forKey: UserDefaultsKey.sortType.value
-			)
-
-			withAnimation(Defaults.springAnimation) { [unowned self] in
-				self.sortedData = self.sort(self.data, basedOn: newValue)
-			}
-		}
-		.store(in: &cancellables)
 	}
 
-	private func syncWithCloudStorage() {
+  private func syncWithCloudStorage() {
 		let cloudTimestamp: Date = cloudStorage.value(for: UserDefaultsKey.timestamp.value) ?? .distantPast
 		let localTimestamp: Date = userDefaults
 			.value(forKey: UserDefaultsKey.timestamp.value) as? Date ?? .distantPast

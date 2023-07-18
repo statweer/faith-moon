@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-	@StateObject private var dataStore = DataStore()
+	@State private var dataStore = DataStore()
 	@State private var isSortMenuOnScreen = false
 
 	@Environment(\.accessibilityReduceTransparency)
