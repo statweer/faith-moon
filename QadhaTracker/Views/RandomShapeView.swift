@@ -143,8 +143,6 @@ private extension View {
 	}
 }
 
-struct RandomShape_Previews: PreviewProvider {
-	static var previews: some View {
-		RandomShapeView()
-	}
+#Preview {
+  RandomShapeView()
 }

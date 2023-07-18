@@ -120,10 +120,8 @@ private struct BubblePreview: View {
 	}
 }
 
-struct Bubble_Previews: PreviewProvider {
-	static var previews: some View {
-		BubblePreview()
-	}
+#Preview {
+  BubblePreview()
 }
 
 extension Color {

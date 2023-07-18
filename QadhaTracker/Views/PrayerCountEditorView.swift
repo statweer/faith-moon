@@ -52,15 +52,13 @@ struct PrayerCountEditorView<Content: View>: View {
 	}
 }
 
-struct PrayerCountEditor_Previews: PreviewProvider {
-	static var previews: some View {
-		PrayerCountEditorView(
-			value: .constant(10)
-		) {
-			Label("Maghrib", systemImage: "sunset")
-		}
-		.background(Color.teal)
-	}
+#Preview {
+  PrayerCountEditorView(
+    value: .constant(10)
+  ) {
+    Label("Maghrib", systemImage: "sunset")
+  }
+  .background(Color.teal)
 }
 
 struct RangeIntegerStrategy: ParseStrategy {
