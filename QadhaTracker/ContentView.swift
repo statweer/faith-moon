@@ -45,7 +45,7 @@ struct ContentView: View {
 				toolbar
 			}
 			.navigationTitle("Qadha Tracker")
-			.onChange(of: dataStore.sortType) { _ in
+			.onChange(of: dataStore.sortType) {
 				isSortMenuOnScreen = false
 			}
 		}

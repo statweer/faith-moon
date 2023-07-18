@@ -34,8 +34,8 @@ struct RandomShapeView: View {
 				}
 			}
 		}
-		.onChange(of: size) { [size] newValue in
-			if size != newValue {
+		.onChange(of: size) { oldValue, newValue in
+			if oldValue != newValue {
 				sizePublisher.send(newValue)
 			}
 		}
