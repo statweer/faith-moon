@@ -89,7 +89,9 @@ final class DataStore {
 			userDefaults.set(cloudData, forKey: UserDefaultsKey.data.value)
 			userDefaults.set(cloudTimestamp, forKey: UserDefaultsKey.timestamp.value)
 
-			let models = [PrayerModel].decode(using: cloudData) ?? []
+			var models = [PrayerModel].decode(using: cloudData) ?? []
+      syncWithNewModelEntities(&models)
+
 			if models.isEmpty {
 				data = PrayerModel.defaultValues
 			} else {
@@ -103,6 +105,40 @@ final class DataStore {
 			cloudStorage.synchronize()
 		}
 	}
+
+  private func syncWithNewModelEntities(_ models: inout [PrayerModel]) {
+    let diff = PrayerModel.defaultValues.difference(from: models) {
+      $0.localizationKey == $1.localizationKey && $0.intrinsicOrder == $1.intrinsicOrder
+    }
+
+    var removedElements: [PrayerModel] = []
+
+    for removal in diff.removals {
+      switch removal {
+      case let .remove(offset, element, _):
+        removedElements.append(element)
+        models.remove(atOffsets: IndexSet(integer: offset))
+      default:
+        continue
+      }
+    }
+
+    for insertion in diff.insertions {
+      switch insertion {
+      case let .insert(offset, element, _):
+        models.insert(element, at: offset)
+      default:
+        continue
+      }
+    }
+
+    for i in 0 ..< removedElements.count {
+      let removedElement = removedElements[i]
+      if let index = models.firstIndex(where: { $0.localizationKey == removedElement.localizationKey }) {
+        models[index].count = removedElement.count
+      }
+    }
+  }
 
 	private func save(_ data: String?) {
 		guard let data else {
