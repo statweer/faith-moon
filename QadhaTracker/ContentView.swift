@@ -77,6 +77,7 @@ struct ContentView: View {
 					.tag(SortType.descending)
 				}
 				.pickerStyle(.inline)
+        .sensoryFeedback(.levelChange, trigger: dataStore.sortType)
 			} label: {
 				Label(
 					"Sort",

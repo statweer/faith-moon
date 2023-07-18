@@ -37,7 +37,6 @@ struct BubbleView<Content: View>: View {
 
 	var body: some View {
 		Button {
-			UIImpactFeedbackGenerator(style: .medium).impactOccurred()
 			isShowingStepper = true
 		} label: {
 			RoundedRectangle(
@@ -68,6 +67,7 @@ struct BubbleView<Content: View>: View {
 					.shadow(color: .black.opacity(0.5), radius: 8)
 			}
 		}
+    .sensoryFeedback(.selection, trigger: isShowingStepper)
 		.buttonStyle(.borderless)
 		.contentShape(
 			.hoverEffect,
