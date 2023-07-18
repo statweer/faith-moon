@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		30421F6F29EF2A15003DB857 /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30421F6E29EF2A15003DB857 /* CloudStorage.swift */; };
+		307150212A666B57005C1A82 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 307150202A666B57005C1A82 /* Localizable.xcstrings */; };
 		3072F13729EB809600E47B7F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072F13629EB809600E47B7F /* View+Extensions.swift */; };
 		3072F13929EB80C300E47B7F /* HostingWindowFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072F13829EB80C300E47B7F /* HostingWindowFinder.swift */; };
-		3072F13D29EB903200E47B7F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3072F13F29EB903200E47B7F /* Localizable.strings */; };
 		3072F14429EB962600E47B7F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3072F14329EB962600E47B7F /* Settings.bundle */; };
 		30A0F44F29EB793400FDA04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A0F44A29EB793400FDA04E /* Assets.xcassets */; };
 		30A0F45029EB793400FDA04E /* QadhaTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F44B29EB793400FDA04E /* QadhaTrackerApp.swift */; };
@@ -31,12 +31,9 @@
 
 /* Begin PBXFileReference section */
 		30421F6E29EF2A15003DB857 /* CloudStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudStorage.swift; sourceTree = "<group>"; };
+		307150202A666B57005C1A82 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3072F13629EB809600E47B7F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		3072F13829EB80C300E47B7F /* HostingWindowFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingWindowFinder.swift; sourceTree = "<group>"; };
-		3072F13E29EB903200E47B7F /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3072F14029EB903900E47B7F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3072F14129EB903E00E47B7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3072F14229EB903F00E47B7F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3072F14329EB962600E47B7F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		30A0F43629EB77E600FDA04E /* QadhaTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QadhaTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A0F44929EB793400FDA04E /* QadhaTracker.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = QadhaTracker.entitlements; sourceTree = "<group>"; };
@@ -148,7 +145,7 @@
 				30A0F46D29EB7CC400FDA04E /* Info.plist */,
 				30A0F44A29EB793400FDA04E /* Assets.xcassets */,
 				30A0F44C29EB793400FDA04E /* Preview Content */,
-				3072F13F29EB903200E47B7F /* Localizable.strings */,
+				307150202A666B57005C1A82 /* Localizable.xcstrings */,
 				3072F14329EB962600E47B7F /* Settings.bundle */,
 			);
 			path = "Supporting Files";
@@ -218,8 +215,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3072F14429EB962600E47B7F /* Settings.bundle in Resources */,
+				307150212A666B57005C1A82 /* Localizable.xcstrings in Resources */,
 				30A0F45129EB793400FDA04E /* Preview Assets.xcassets in Resources */,
-				3072F13D29EB903200E47B7F /* Localizable.strings in Resources */,
 				30A0F44F29EB793400FDA04E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,25 +271,13 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		3072F13F29EB903200E47B7F /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3072F13E29EB903200E47B7F /* fa */,
-				3072F14029EB903900E47B7F /* ar */,
-				3072F14129EB903E00E47B7F /* en */,
-				3072F14229EB903F00E47B7F /* tr */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		30A0F44329EB77E700FDA04E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -353,6 +338,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -395,6 +382,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
