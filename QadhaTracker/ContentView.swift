@@ -1,10 +1,11 @@
 import SwiftUI
 
 struct ContentView: View {
-	@State private var dataStore = DataStore()
 	@State private var isSortMenuOnScreen = false
 
 	@Environment(\.accessibilityReduceTransparency)
+  @Environment(DataStore.self)
+  private var dataStore
   private var isReduceTransparencyEnabled
 
 	var body: some View {
@@ -17,6 +18,14 @@ struct ContentView: View {
 							.edgesIgnoringSafeArea(.all)
 					}
 #endif
+  private var sortTypeBinding: Binding<SortType> {
+    Binding {
+      dataStore.sortType
+    } set: { newValue in
+      dataStore.sortType = newValue
+    }
+  }
+
 
 					ScrollView {
 						MasonryLayout(
