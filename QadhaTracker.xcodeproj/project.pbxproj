@@ -11,6 +11,8 @@
 		305A9EC12A66C139002221EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305A9EC02A66C139002221EE /* Preview Assets.xcassets */; };
 		305A9EC42A66C139002221EE /* QadhaTracker Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 305A9EB72A66C137002221EE /* QadhaTracker Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		305B71342A7F8BB300B1D8E3 /* QadhaTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F44B29EB793400FDA04E /* QadhaTrackerApp.swift */; };
+		305B71362A7F8EB200B1D8E3 /* MainWindowSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305B71352A7F8EB200B1D8E3 /* MainWindowSizeKey.swift */; };
+		305B71372A7F914400B1D8E3 /* MainWindowSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305B71352A7F8EB200B1D8E3 /* MainWindowSizeKey.swift */; };
 		305B71382A7F9FF000B1D8E3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 307150202A666B57005C1A82 /* Localizable.xcstrings */; };
 		305B71392A7FA03F00B1D8E3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3072F14329EB962600E47B7F /* Settings.bundle */; };
 		307150212A666B57005C1A82 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 307150202A666B57005C1A82 /* Localizable.xcstrings */; };
@@ -77,6 +79,7 @@
 		305A9EB72A66C137002221EE /* QadhaTracker Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QadhaTracker Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		305A9EC02A66C139002221EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		305B71332A7F86EB00B1D8E3 /* QadhaTracker Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "QadhaTracker Watch.entitlements"; sourceTree = "<group>"; };
+		305B71352A7F8EB200B1D8E3 /* MainWindowSizeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowSizeKey.swift; sourceTree = "<group>"; };
 		307150202A666B57005C1A82 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3072F13629EB809600E47B7F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		3072F14329EB962600E47B7F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 				30A0F45729EB7C9300FDA04E /* SizePreference.swift */,
 				30A0F45529EB7C9300FDA04E /* String+Extensions.swift */,
 				3072F13629EB809600E47B7F /* View+Extensions.swift */,
+				305B71352A7F8EB200B1D8E3 /* MainWindowSizeKey.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +361,7 @@
 				30C64DD82A66C3A300CEB23A /* PrayerCountEditorView.swift in Sources */,
 				30C64DD72A66C3A100CEB23A /* MasonryLayout.swift in Sources */,
 				30C64DD22A66C37100CEB23A /* Codable+Extensions.swift in Sources */,
+				305B71372A7F914400B1D8E3 /* MainWindowSizeKey.swift in Sources */,
 				30C64DD02A66C36300CEB23A /* UserDefaultsKey.swift in Sources */,
 				30C64DD52A66C37100CEB23A /* View+Extensions.swift in Sources */,
 				30C64DCE2A66C35A00CEB23A /* PrayerModel.swift in Sources */,
@@ -379,6 +384,7 @@
 				30A0F46C29EB7C9300FDA04E /* PrayerCountEditorView.swift in Sources */,
 				30A0F46B29EB7C9300FDA04E /* MasonryLayout.swift in Sources */,
 				30A0F46329EB7C9300FDA04E /* SizePreference.swift in Sources */,
+				305B71362A7F8EB200B1D8E3 /* MainWindowSizeKey.swift in Sources */,
 				30A0F46A29EB7C9300FDA04E /* RandomShapeView.swift in Sources */,
 				30A0F46429EB7C9300FDA04E /* DataStore.swift in Sources */,
 				30A0F45029EB793400FDA04E /* QadhaTrackerApp.swift in Sources */,
