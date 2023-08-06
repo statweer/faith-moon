@@ -11,6 +11,8 @@
 		305A9EC12A66C139002221EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305A9EC02A66C139002221EE /* Preview Assets.xcassets */; };
 		305A9EC42A66C139002221EE /* QadhaTracker Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 305A9EB72A66C137002221EE /* QadhaTracker Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		305B71342A7F8BB300B1D8E3 /* QadhaTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F44B29EB793400FDA04E /* QadhaTrackerApp.swift */; };
+		305B71382A7F9FF000B1D8E3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 307150202A666B57005C1A82 /* Localizable.xcstrings */; };
+		305B71392A7FA03F00B1D8E3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3072F14329EB962600E47B7F /* Settings.bundle */; };
 		307150212A666B57005C1A82 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 307150202A666B57005C1A82 /* Localizable.xcstrings */; };
 		3072F13729EB809600E47B7F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072F13629EB809600E47B7F /* View+Extensions.swift */; };
 		3072F14429EB962600E47B7F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3072F14329EB962600E47B7F /* Settings.bundle */; };
@@ -305,8 +307,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				305B71392A7FA03F00B1D8E3 /* Settings.bundle in Resources */,
 				305A9EC12A66C139002221EE /* Preview Assets.xcassets in Resources */,
 				30C64DCB2A66C2D100CEB23A /* Assets.xcassets in Resources */,
+				305B71382A7F9FF000B1D8E3 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

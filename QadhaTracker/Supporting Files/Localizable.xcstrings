@@ -2,7 +2,6 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Ascending" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -89,7 +88,6 @@
       }
     },
     "Default" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -118,7 +116,6 @@
       }
     },
     "Descending" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -377,7 +374,6 @@
       }
     },
     "Sort" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
