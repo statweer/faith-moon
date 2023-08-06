@@ -44,7 +44,7 @@ final class DataStore {
   private var cancellables: Set<AnyCancellable> = []
 
   init(
-    userDefaults: UserDefaults = UserDefaults.standard,
+    userDefaults: UserDefaults = UserDefaults(suiteName: "group.com.statweer.qadhatracker") ?? .standard,
     cloudStorage: CloudStorage = NSUbiquitousKeyValueStore.default
   ) {
     self.userDefaults = userDefaults
