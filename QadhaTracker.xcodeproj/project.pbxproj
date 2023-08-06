@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		30421F6F29EF2A15003DB857 /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30421F6E29EF2A15003DB857 /* CloudStorage.swift */; };
-		305A9EBA2A66C137002221EE /* QadhaTrackerWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A9EB92A66C137002221EE /* QadhaTrackerWatchApp.swift */; };
 		305A9EC12A66C139002221EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305A9EC02A66C139002221EE /* Preview Assets.xcassets */; };
 		305A9EC42A66C139002221EE /* QadhaTracker Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 305A9EB72A66C137002221EE /* QadhaTracker Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		305B71342A7F8BB300B1D8E3 /* QadhaTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F44B29EB793400FDA04E /* QadhaTrackerApp.swift */; };
 		307150212A666B57005C1A82 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 307150202A666B57005C1A82 /* Localizable.xcstrings */; };
 		3072F13729EB809600E47B7F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072F13629EB809600E47B7F /* View+Extensions.swift */; };
 		3072F14429EB962600E47B7F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3072F14329EB962600E47B7F /* Settings.bundle */; };
@@ -73,8 +73,6 @@
 /* Begin PBXFileReference section */
 		30421F6E29EF2A15003DB857 /* CloudStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudStorage.swift; sourceTree = "<group>"; };
 		305A9EB72A66C137002221EE /* QadhaTracker Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QadhaTracker Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		305A9EB92A66C137002221EE /* QadhaTrackerWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QadhaTrackerWatchApp.swift; sourceTree = "<group>"; };
-		305A9EBB2A66C137002221EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		305A9EC02A66C139002221EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		307150202A666B57005C1A82 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3072F13629EB809600E47B7F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
@@ -120,8 +118,6 @@
 		305A9EB82A66C137002221EE /* QadhaTracker Watch */ = {
 			isa = PBXGroup;
 			children = (
-				305A9EB92A66C137002221EE /* QadhaTrackerWatchApp.swift */,
-				305A9EBB2A66C137002221EE /* ContentView.swift */,
 				305A9EBF2A66C139002221EE /* Preview Content */,
 			);
 			path = "QadhaTracker Watch";
@@ -365,8 +361,8 @@
 				30C64DD62A66C39F00CEB23A /* Bubble.swift in Sources */,
 				30C64DCD2A66C35100CEB23A /* DataStore.swift in Sources */,
 				30C64DD12A66C36500CEB23A /* CloudStorage.swift in Sources */,
+				305B71342A7F8BB300B1D8E3 /* QadhaTrackerApp.swift in Sources */,
 				30C64DCF2A66C36100CEB23A /* SortType.swift in Sources */,
-				305A9EBA2A66C137002221EE /* QadhaTrackerWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
