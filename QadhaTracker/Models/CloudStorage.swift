@@ -10,36 +10,36 @@ import Foundation
 import Combine
 
 protocol CloudStorage {
-	func object(forKey key: String) -> Any?
-	func set(_ value: Any?, forKey key: String)
+  func object(forKey key: String) -> Any?
+  func set(_ value: Any?, forKey key: String)
 
-	@discardableResult
-	func synchronize() -> Bool
-	func publisher(for key: String) -> AnyPublisher<String?, Never>
+  @discardableResult
+  func synchronize() -> Bool
+  func publisher(for key: String) -> AnyPublisher<String?, Never>
 }
 
 extension CloudStorage {
-	func value<T>(for key: String) -> T? {
-		object(forKey: key) as? T
-	}
+  func value<T>(for key: String) -> T? {
+    object(forKey: key) as? T
+  }
 }
 
 extension NSUbiquitousKeyValueStore: CloudStorage {
-	func publisher(for key: String) -> AnyPublisher<String?, Never> {
-		NotificationCenter.default.publisher(
-			for: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
-			object: self
-		)
-		.compactMap { notification in
-			guard let userInfo = notification.userInfo else { return nil }
-			return userInfo[NSUbiquitousKeyValueStoreChangedKeysKey] as? [String]
-		}
-		.filter { (changedKeys: [String]) in
-			changedKeys.contains(key)
-		}
-		.map { _ in
-			self.value(for: key)
-		}
-		.eraseToAnyPublisher()
-	}
+  func publisher(for key: String) -> AnyPublisher<String?, Never> {
+    NotificationCenter.default.publisher(
+      for: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
+      object: self
+    )
+    .compactMap { notification in
+      guard let userInfo = notification.userInfo else { return nil }
+      return userInfo[NSUbiquitousKeyValueStoreChangedKeysKey] as? [String]
+    }
+    .filter { (changedKeys: [String]) in
+      changedKeys.contains(key)
+    }
+    .map { _ in
+      self.value(for: key)
+    }
+    .eraseToAnyPublisher()
+  }
 }

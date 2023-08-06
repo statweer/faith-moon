@@ -8,9 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		30421F6F29EF2A15003DB857 /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30421F6E29EF2A15003DB857 /* CloudStorage.swift */; };
+		305A9EC12A66C139002221EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305A9EC02A66C139002221EE /* Preview Assets.xcassets */; };
+		305A9EC42A66C139002221EE /* QadhaTracker Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 305A9EB72A66C137002221EE /* QadhaTracker Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		305B71342A7F8BB300B1D8E3 /* QadhaTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F44B29EB793400FDA04E /* QadhaTrackerApp.swift */; };
+		305B71362A7F8EB200B1D8E3 /* MainWindowSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305B71352A7F8EB200B1D8E3 /* MainWindowSizeKey.swift */; };
+		305B71372A7F914400B1D8E3 /* MainWindowSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305B71352A7F8EB200B1D8E3 /* MainWindowSizeKey.swift */; };
+		305B71382A7F9FF000B1D8E3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 307150202A666B57005C1A82 /* Localizable.xcstrings */; };
+		305B71392A7FA03F00B1D8E3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3072F14329EB962600E47B7F /* Settings.bundle */; };
 		307150212A666B57005C1A82 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 307150202A666B57005C1A82 /* Localizable.xcstrings */; };
 		3072F13729EB809600E47B7F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072F13629EB809600E47B7F /* View+Extensions.swift */; };
-		3072F13929EB80C300E47B7F /* HostingWindowFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072F13829EB80C300E47B7F /* HostingWindowFinder.swift */; };
 		3072F14429EB962600E47B7F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3072F14329EB962600E47B7F /* Settings.bundle */; };
 		30A0F44F29EB793400FDA04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A0F44A29EB793400FDA04E /* Assets.xcassets */; };
 		30A0F45029EB793400FDA04E /* QadhaTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F44B29EB793400FDA04E /* QadhaTrackerApp.swift */; };
@@ -27,13 +33,55 @@
 		30A0F46A29EB7C9300FDA04E /* RandomShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45E29EB7C9300FDA04E /* RandomShapeView.swift */; };
 		30A0F46B29EB7C9300FDA04E /* MasonryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45F29EB7C9300FDA04E /* MasonryLayout.swift */; };
 		30A0F46C29EB7C9300FDA04E /* PrayerCountEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F46029EB7C9300FDA04E /* PrayerCountEditorView.swift */; };
+		30C64DCB2A66C2D100CEB23A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A0F44A29EB793400FDA04E /* Assets.xcassets */; };
+		30C64DCC2A66C34000CEB23A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45629EB7C9300FDA04E /* ContentView.swift */; };
+		30C64DCD2A66C35100CEB23A /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45829EB7C9300FDA04E /* DataStore.swift */; };
+		30C64DCE2A66C35A00CEB23A /* PrayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45929EB7C9300FDA04E /* PrayerModel.swift */; };
+		30C64DCF2A66C36100CEB23A /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45B29EB7C9300FDA04E /* SortType.swift */; };
+		30C64DD02A66C36300CEB23A /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45D29EB7C9300FDA04E /* UserDefaultsKey.swift */; };
+		30C64DD12A66C36500CEB23A /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30421F6E29EF2A15003DB857 /* CloudStorage.swift */; };
+		30C64DD22A66C37100CEB23A /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45C29EB7C9300FDA04E /* Codable+Extensions.swift */; };
+		30C64DD32A66C37100CEB23A /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45529EB7C9300FDA04E /* String+Extensions.swift */; };
+		30C64DD42A66C37100CEB23A /* SizePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45729EB7C9300FDA04E /* SizePreference.swift */; };
+		30C64DD52A66C37100CEB23A /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072F13629EB809600E47B7F /* View+Extensions.swift */; };
+		30C64DD62A66C39F00CEB23A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45A29EB7C9300FDA04E /* Bubble.swift */; };
+		30C64DD72A66C3A100CEB23A /* MasonryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45F29EB7C9300FDA04E /* MasonryLayout.swift */; };
+		30C64DD82A66C3A300CEB23A /* PrayerCountEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F46029EB7C9300FDA04E /* PrayerCountEditorView.swift */; };
+		30C64DD92A66C3A500CEB23A /* RandomShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0F45E29EB7C9300FDA04E /* RandomShapeView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		305A9EC22A66C139002221EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30A0F42E29EB77E600FDA04E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 305A9EB62A66C137002221EE;
+			remoteInfo = "QadhaTrackerWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		305A9EC82A66C139002221EE /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				305A9EC42A66C139002221EE /* QadhaTracker Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		30421F6E29EF2A15003DB857 /* CloudStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudStorage.swift; sourceTree = "<group>"; };
+		305A9EB72A66C137002221EE /* QadhaTracker Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QadhaTracker Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		305A9EC02A66C139002221EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		305B71332A7F86EB00B1D8E3 /* QadhaTracker Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "QadhaTracker Watch.entitlements"; sourceTree = "<group>"; };
+		305B71352A7F8EB200B1D8E3 /* MainWindowSizeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowSizeKey.swift; sourceTree = "<group>"; };
 		307150202A666B57005C1A82 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3072F13629EB809600E47B7F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
-		3072F13829EB80C300E47B7F /* HostingWindowFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingWindowFinder.swift; sourceTree = "<group>"; };
 		3072F14329EB962600E47B7F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		30A0F43629EB77E600FDA04E /* QadhaTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QadhaTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A0F44929EB793400FDA04E /* QadhaTracker.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = QadhaTracker.entitlements; sourceTree = "<group>"; };
@@ -56,6 +104,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		305A9EB42A66C137002221EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30A0F43329EB77E600FDA04E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,6 +121,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		305A9EB82A66C137002221EE /* QadhaTracker Watch */ = {
+			isa = PBXGroup;
+			children = (
+				305B71332A7F86EB00B1D8E3 /* QadhaTracker Watch.entitlements */,
+				305A9EBF2A66C139002221EE /* Preview Content */,
+			);
+			path = "QadhaTracker Watch";
+			sourceTree = "<group>";
+		};
+		305A9EBF2A66C139002221EE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				305A9EC02A66C139002221EE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		3072F13329EB7E0000E47B7F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +145,7 @@
 				30A0F45729EB7C9300FDA04E /* SizePreference.swift */,
 				30A0F45529EB7C9300FDA04E /* String+Extensions.swift */,
 				3072F13629EB809600E47B7F /* View+Extensions.swift */,
+				305B71352A7F8EB200B1D8E3 /* MainWindowSizeKey.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -95,7 +168,6 @@
 				30A0F45F29EB7C9300FDA04E /* MasonryLayout.swift */,
 				30A0F46029EB7C9300FDA04E /* PrayerCountEditorView.swift */,
 				30A0F45E29EB7C9300FDA04E /* RandomShapeView.swift */,
-				3072F13829EB80C300E47B7F /* HostingWindowFinder.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				30A0F44829EB793400FDA04E /* QadhaTracker */,
+				305A9EB82A66C137002221EE /* QadhaTracker Watch */,
 				30A0F43729EB77E600FDA04E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				30A0F43629EB77E600FDA04E /* QadhaTracker.app */,
+				305A9EB72A66C137002221EE /* QadhaTracker Watch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +228,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		305A9EB62A66C137002221EE /* QadhaTracker Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305A9EC52A66C139002221EE /* Build configuration list for PBXNativeTarget "QadhaTracker Watch" */;
+			buildPhases = (
+				305A9EB32A66C137002221EE /* Sources */,
+				305A9EB42A66C137002221EE /* Frameworks */,
+				305A9EB52A66C137002221EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QadhaTracker Watch";
+			productName = "QadhaTrackerWatch Watch App";
+			productReference = 305A9EB72A66C137002221EE /* QadhaTracker Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
 		30A0F43529EB77E600FDA04E /* QadhaTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30A0F44529EB77E700FDA04E /* Build configuration list for PBXNativeTarget "QadhaTracker" */;
@@ -162,10 +253,12 @@
 				30A0F43329EB77E600FDA04E /* Frameworks */,
 				30A0F43429EB77E600FDA04E /* Resources */,
 				3072F13A29EB8A0500E47B7F /* SwiftLint */,
+				305A9EC82A66C139002221EE /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				305A9EC32A66C139002221EE /* PBXTargetDependency */,
 			);
 			name = QadhaTracker;
 			productName = "Qadha Tracker";
@@ -183,6 +276,9 @@
 				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Saeed Tatweer IT Services Est.";
 				TargetAttributes = {
+					305A9EB62A66C137002221EE = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					30A0F43529EB77E600FDA04E = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -205,11 +301,23 @@
 			projectRoot = "";
 			targets = (
 				30A0F43529EB77E600FDA04E /* QadhaTracker */,
+				305A9EB62A66C137002221EE /* QadhaTracker Watch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		305A9EB52A66C137002221EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305B71392A7FA03F00B1D8E3 /* Settings.bundle in Resources */,
+				305A9EC12A66C139002221EE /* Preview Assets.xcassets in Resources */,
+				30C64DCB2A66C2D100CEB23A /* Assets.xcassets in Resources */,
+				305B71382A7F9FF000B1D8E3 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30A0F43429EB77E600FDA04E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +354,29 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		305A9EB32A66C137002221EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C64DD82A66C3A300CEB23A /* PrayerCountEditorView.swift in Sources */,
+				30C64DD72A66C3A100CEB23A /* MasonryLayout.swift in Sources */,
+				30C64DD22A66C37100CEB23A /* Codable+Extensions.swift in Sources */,
+				305B71372A7F914400B1D8E3 /* MainWindowSizeKey.swift in Sources */,
+				30C64DD02A66C36300CEB23A /* UserDefaultsKey.swift in Sources */,
+				30C64DD52A66C37100CEB23A /* View+Extensions.swift in Sources */,
+				30C64DCE2A66C35A00CEB23A /* PrayerModel.swift in Sources */,
+				30C64DCC2A66C34000CEB23A /* ContentView.swift in Sources */,
+				30C64DD92A66C3A500CEB23A /* RandomShapeView.swift in Sources */,
+				30C64DD32A66C37100CEB23A /* String+Extensions.swift in Sources */,
+				30C64DD42A66C37100CEB23A /* SizePreference.swift in Sources */,
+				30C64DD62A66C39F00CEB23A /* Bubble.swift in Sources */,
+				30C64DCD2A66C35100CEB23A /* DataStore.swift in Sources */,
+				30C64DD12A66C36500CEB23A /* CloudStorage.swift in Sources */,
+				305B71342A7F8BB300B1D8E3 /* QadhaTrackerApp.swift in Sources */,
+				30C64DCF2A66C36100CEB23A /* SortType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30A0F43229EB77E600FDA04E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,6 +384,7 @@
 				30A0F46C29EB7C9300FDA04E /* PrayerCountEditorView.swift in Sources */,
 				30A0F46B29EB7C9300FDA04E /* MasonryLayout.swift in Sources */,
 				30A0F46329EB7C9300FDA04E /* SizePreference.swift in Sources */,
+				305B71362A7F8EB200B1D8E3 /* MainWindowSizeKey.swift in Sources */,
 				30A0F46A29EB7C9300FDA04E /* RandomShapeView.swift in Sources */,
 				30A0F46429EB7C9300FDA04E /* DataStore.swift in Sources */,
 				30A0F45029EB793400FDA04E /* QadhaTrackerApp.swift in Sources */,
@@ -260,7 +392,6 @@
 				30A0F46729EB7C9300FDA04E /* SortType.swift in Sources */,
 				30A0F46129EB7C9300FDA04E /* String+Extensions.swift in Sources */,
 				30421F6F29EF2A15003DB857 /* CloudStorage.swift in Sources */,
-				3072F13929EB80C300E47B7F /* HostingWindowFinder.swift in Sources */,
 				30A0F46529EB7C9300FDA04E /* PrayerModel.swift in Sources */,
 				3072F13729EB809600E47B7F /* View+Extensions.swift in Sources */,
 				30A0F46229EB7C9300FDA04E /* ContentView.swift in Sources */,
@@ -271,12 +402,78 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		305A9EC32A66C139002221EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 305A9EB62A66C137002221EE /* QadhaTracker Watch */;
+			targetProxy = 305A9EC22A66C139002221EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		305A9EC62A66C139002221EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "QadhaTracker Watch/QadhaTracker Watch.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"QadhaTracker Watch/Preview Content\"";
+				DEVELOPMENT_TEAM = FABZJ3JQTT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.statweer.qadhatracker;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID).watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		305A9EC72A66C139002221EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "QadhaTracker Watch/QadhaTracker Watch.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"QadhaTracker Watch/Preview Content\"";
+				DEVELOPMENT_TEAM = FABZJ3JQTT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.statweer.qadhatracker;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID).watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		30A0F44329EB77E700FDA04E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_ID = com.statweer.qadhatracker;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -307,6 +504,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -326,14 +524,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Qadha Tracker";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -342,6 +543,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_ID = com.statweer.qadhatracker;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -372,6 +574,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -385,25 +588,28 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Qadha Tracker";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
 		30A0F44629EB77E700FDA04E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "QadhaTracker/Supporting Files/QadhaTracker.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"QadhaTracker/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = FABZJ3JQTT;
@@ -411,7 +617,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "QadhaTracker/Supporting Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Qadha Tracker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -425,8 +630,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.statweer.qadhatracker;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -441,12 +645,12 @@
 		30A0F44729EB77E700FDA04E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "QadhaTracker/Supporting Files/QadhaTracker.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"QadhaTracker/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = FABZJ3JQTT;
@@ -454,7 +658,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "QadhaTracker/Supporting Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Qadha Tracker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -468,8 +671,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.statweer.qadhatracker;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -484,6 +686,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		305A9EC52A66C139002221EE /* Build configuration list for PBXNativeTarget "QadhaTracker Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305A9EC62A66C139002221EE /* Debug */,
+				305A9EC72A66C139002221EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		30A0F43129EB77E600FDA04E /* Build configuration list for PBXProject "QadhaTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
