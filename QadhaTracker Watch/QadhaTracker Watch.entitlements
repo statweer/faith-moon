@@ -6,13 +6,9 @@
 	<array/>
 	<key>com.apple.developer.ubiquity-kvstore-identifier</key>
 	<string>$(TeamIdentifierPrefix)$(BUNDLE_ID)</string>
-	<key>com.apple.security.app-sandbox</key>
-	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
 		<string>group.com.statweer.qadhatracker</string>
 	</array>
-	<key>com.apple.security.files.user-selected.read-only</key>
-	<true/>
 </dict>
 </plist>

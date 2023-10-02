@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "305A9EB62A66C137002221EE"
+               BuildableName = "QadhaTracker Watch.app"
+               BlueprintName = "QadhaTracker Watch"
+               ReferencedContainer = "container:QadhaTracker.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "30A0F43529EB77E600FDA04E"
                BuildableName = "QadhaTracker.app"
                BlueprintName = "QadhaTracker"
@@ -44,9 +58,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30A0F43529EB77E600FDA04E"
-            BuildableName = "QadhaTracker.app"
-            BlueprintName = "QadhaTracker"
+            BlueprintIdentifier = "305A9EB62A66C137002221EE"
+            BuildableName = "QadhaTracker Watch.app"
+            BlueprintName = "QadhaTracker Watch"
             ReferencedContainer = "container:QadhaTracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +75,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30A0F43529EB77E600FDA04E"
-            BuildableName = "QadhaTracker.app"
-            BlueprintName = "QadhaTracker"
+            BlueprintIdentifier = "305A9EB62A66C137002221EE"
+            BuildableName = "QadhaTracker Watch.app"
+            BlueprintName = "QadhaTracker Watch"
             ReferencedContainer = "container:QadhaTracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

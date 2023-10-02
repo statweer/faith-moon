@@ -21,14 +21,14 @@ struct PrayerModel {
 extension PrayerModel {
   var systemImage: String {
     switch localizationKey {
-    case "Fajr": return "sunrise"
-    case "Dhuhr": return "sun.max"
-    case "Asr": return "sun.dust"
-    case "Maghrib": return "sunset"
-    case "Isha": return "moon"
-    case "Ayat": return "tropicalstorm"
-    case "Ramadan Fast": return "sparkles"
-    default: return "laurel.leading"
+    case "Fajr": "sunrise"
+    case "Dhuhr": "sun.max"
+    case "Asr": "sun.dust"
+    case "Maghrib": "sunset"
+    case "Isha": "moon"
+    case "Ayat": "tropicalstorm"
+    case "Ramadan Fast": "sparkles"
+    default: "laurel.leading"
     }
   }
 }
