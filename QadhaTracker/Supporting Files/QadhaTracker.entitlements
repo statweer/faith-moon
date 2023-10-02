@@ -5,14 +5,10 @@
 	<key>com.apple.developer.icloud-container-identifiers</key>
 	<array/>
 	<key>com.apple.developer.ubiquity-kvstore-identifier</key>
-	<string>$(TeamIdentifierPrefix)$(BUNDLE_ID)</string>
-	<key>com.apple.security.app-sandbox</key>
-	<true/>
+	<string>FABZJ3JQTT.com.statweer.qadhatracker</string>
 	<key>com.apple.security.application-groups</key>
 	<array>
 		<string>group.com.statweer.qadhatracker</string>
 	</array>
-	<key>com.apple.security.files.user-selected.read-only</key>
-	<true/>
 </dict>
 </plist>
