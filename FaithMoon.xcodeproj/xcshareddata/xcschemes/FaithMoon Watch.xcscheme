@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1510"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "305A9EB62A66C137002221EE"
-               BuildableName = "QadhaTracker Watch.app"
-               BlueprintName = "QadhaTracker Watch"
-               ReferencedContainer = "container:QadhaTracker.xcodeproj">
+               BuildableName = "FaithMoon Watch.app"
+               BlueprintName = "FaithMoon Watch"
+               ReferencedContainer = "container:FaithMoon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30A0F43529EB77E600FDA04E"
-               BuildableName = "QadhaTracker.app"
-               BlueprintName = "QadhaTracker"
-               ReferencedContainer = "container:QadhaTracker.xcodeproj">
+               BuildableName = "FaithMoon.app"
+               BlueprintName = "FaithMoon"
+               ReferencedContainer = "container:FaithMoon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -59,9 +59,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "305A9EB62A66C137002221EE"
-            BuildableName = "QadhaTracker Watch.app"
-            BlueprintName = "QadhaTracker Watch"
-            ReferencedContainer = "container:QadhaTracker.xcodeproj">
+            BuildableName = "Faith Moon.app"
+            BlueprintName = "FaithMoon Watch"
+            ReferencedContainer = "container:FaithMoon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "305A9EB62A66C137002221EE"
-            BuildableName = "QadhaTracker Watch.app"
-            BlueprintName = "QadhaTracker Watch"
-            ReferencedContainer = "container:QadhaTracker.xcodeproj">
+            BuildableName = "Faith Moon.app"
+            BlueprintName = "FaithMoon Watch"
+            ReferencedContainer = "container:FaithMoon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,6 +1,6 @@
 //
 //  MainWindowSizeKey.swift
-//  QadhaTracker
+//  FaithMoon
 //
 //  Created by Saeed Taheri on 8/6/23.
 //  Copyright © 2023 Saeed Tatweer IT Services Est. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  View+Extensions.swift
-//  QadhaTracker
+//  FaithMoon
 //
 //  Created by Saeed Taheri on 4/16/23.
 //

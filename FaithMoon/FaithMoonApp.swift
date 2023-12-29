@@ -1,6 +1,6 @@
 //
-//  QadhaTrackerApp.swift
-//  QadhaTracker
+//  FaithMoonApp.swift
+//  FaithMoon
 //
 //  Created by Saeed Taheri on 4/16/23.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct QadhaTrackerApp: App {
+struct FaithMoonApp: App {
   private let dataStore = DataStore()
 
   var body: some Scene {

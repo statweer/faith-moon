@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1510"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30A0F43529EB77E600FDA04E"
-               BuildableName = "QadhaTracker.app"
-               BlueprintName = "QadhaTracker"
-               ReferencedContainer = "container:QadhaTracker.xcodeproj">
+               BuildableName = "FaithMoon.app"
+               BlueprintName = "FaithMoon"
+               ReferencedContainer = "container:FaithMoon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30A0F43529EB77E600FDA04E"
-            BuildableName = "QadhaTracker.app"
-            BlueprintName = "QadhaTracker"
-            ReferencedContainer = "container:QadhaTracker.xcodeproj">
+            BuildableName = "FaithMoon.app"
+            BlueprintName = "FaithMoon"
+            ReferencedContainer = "container:FaithMoon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30A0F43529EB77E600FDA04E"
-            BuildableName = "QadhaTracker.app"
-            BlueprintName = "QadhaTracker"
-            ReferencedContainer = "container:QadhaTracker.xcodeproj">
+            BuildableName = "FaithMoon.app"
+            BlueprintName = "FaithMoon"
+            ReferencedContainer = "container:FaithMoon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
