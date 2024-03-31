@@ -1,8 +1,7 @@
 import Foundation
 
 enum UserDefaultsKey: String {
-  case data
-  case timestamp
+  case keyValueStoreTimestamp
   case sortType
 
   var value: String {

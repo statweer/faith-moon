@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
   @State private var isSortMenuOnScreen = false
 
-  @Environment(DataStore.self)
+  @Environment(KeyValueStore.self)
   private var dataStore
 
   @Environment(\.accessibilityReduceTransparency)

@@ -37,7 +37,11 @@ struct PrayerCountEditorView<Content: View>: View {
       }
       .padding(.trailing, isRunningOnWatch ? nil : -8.0)
 
-      Stepper(value: $value.animation(), in: 0...Int.max, step: 1) {
+      Stepper(
+        value: $value.animation(.bouncySpring),
+        in: 0...Int.max,
+        step: 1
+      ) {
         if isRunningOnWatch {
           Text(value, format: .ranged(0...Int.max))
         } else {
