@@ -16,7 +16,7 @@ struct PrayersListView: View {
   @Environment(\.modelContext)
   private var context
 
-  private var sort: SortDescriptor<Prayer>
+  private var sort: [SortDescriptor<Prayer>]
 
   @Environment(\.mainWindowSize)
   private var windowSize
@@ -71,10 +71,10 @@ struct PrayersListView: View {
     }
   }
 
-  init(sort: SortDescriptor<Prayer>) {
+  init(sort: [SortDescriptor<Prayer>]) {
     self.sort = sort
     self._prayers = Query(
-      sort: [sort],
+      sort: sort,
       animation: .bouncySpring
     )
   }

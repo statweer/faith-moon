@@ -12,7 +12,7 @@ struct ContentView: View {
   @Environment(\.accessibilityReduceTransparency)
   private var isReduceTransparencyEnabled
 
-  @State private var sortDescriptor = SortDescriptor(\Prayer.intrinsicOrder)
+  @State private var sortDescriptors = [SortDescriptor(\Prayer.intrinsicOrder)]
 
   var body: some View {
     NavigationStack {
@@ -22,7 +22,7 @@ struct ContentView: View {
             .edgesIgnoringSafeArea(.all)
         }
 
-        PrayersListView(sort: sortDescriptor)
+        PrayersListView(sort: sortDescriptors)
           .environment(\.isEnabled, !isSortMenuOnScreen)
       }
       .onTapGesture {
@@ -39,13 +39,21 @@ struct ContentView: View {
       #endif
 
       withAnimation(.bouncySpring) {
-        sortDescriptor = switch newValue {
+        sortDescriptors = switch newValue {
         case .ascending:
-          SortDescriptor(\.count, order: .forward)
+          [
+            SortDescriptor(\.count, order: .forward),
+            SortDescriptor(\.intrinsicOrder, order: .forward)
+          ]
         case .descending:
-          SortDescriptor(\.count, order: .reverse)
+          [
+            SortDescriptor(\.count, order: .reverse),
+            SortDescriptor(\.intrinsicOrder, order: .forward)
+          ]
         case .default:
-          SortDescriptor(\.intrinsicOrder, order: .forward)
+          [
+            SortDescriptor(\.intrinsicOrder, order: .forward)
+          ]
         }
       }
     }
