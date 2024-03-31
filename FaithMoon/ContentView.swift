@@ -17,11 +17,9 @@ struct ContentView: View {
   var body: some View {
     NavigationStack {
       ZStack {
-        if !isReduceTransparencyEnabled {
-          if !(isRunningOnVision || isiOSAppRunningOnMac) {
-            RandomShapeView()
-              .edgesIgnoringSafeArea(.all)
-          }
+        if isiOS, !isReduceTransparencyEnabled {
+          RandomShapeView()
+            .edgesIgnoringSafeArea(.all)
         }
 
         PrayersListView(sort: sortDescriptors)
@@ -36,9 +34,9 @@ struct ContentView: View {
       .navigationTitle("Qadha Tracker")
     }
     .onChange(of: dataStore.sortType, initial: true) { _, newValue in
-      #if os(iOS)
-      isSortMenuOnScreen = false
-      #endif
+      if !isRunningOnWatch {
+        isSortMenuOnScreen = false
+      }
 
       withAnimation(.bouncySpring) {
         sortDescriptors = switch newValue {

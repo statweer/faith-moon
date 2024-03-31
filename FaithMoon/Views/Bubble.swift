@@ -58,7 +58,9 @@ struct BubbleView<Content: View>: View {
               .minimumScaleFactor(0.5)
               .environment(\.locale, Locale(identifier: "en_US"))
           }
-          .shadow(color: .black.opacity(0.5), radius: 10)
+          .shadow(color: .black.opacity(0.4), radius: 0.6)
+          .compositingGroup()
+          .shadow(color: .black, radius: 16)
       }
       .overlay(alignment: .bottomLeading) {
         label()

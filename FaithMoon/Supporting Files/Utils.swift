@@ -24,6 +24,14 @@ var isRunningOnVision: Bool {
 #endif
 }
 
+var isiOS: Bool {
+#if os(iOS)
+  return true
+#else
+  return false
+#endif
+}
+
 var isiOSAppRunningOnMac: Bool {
   ProcessInfo.processInfo.isiOSAppOnMac
 }
