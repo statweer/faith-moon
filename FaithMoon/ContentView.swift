@@ -6,67 +6,54 @@ struct ContentView: View {
   @Environment(KeyValueStore.self)
   private var dataStore
 
+  @Environment(\.modelContext)
+  private var modelContext
+
   @Environment(\.accessibilityReduceTransparency)
   private var isReduceTransparencyEnabled
 
-  private var sortTypeBinding: Binding<SortType> {
-    Binding {
-      dataStore.sortType
-    } set: { newValue in
-      dataStore.sortType = newValue
-    }
-  }
+  @State private var sortDescriptor = SortDescriptor(\Prayer.intrinsicOrder)
 
   var body: some View {
     NavigationStack {
-      GeometryReader { proxy in
-        ZStack {
-          if !isReduceTransparencyEnabled {
-            RandomShapeView()
-              .edgesIgnoringSafeArea(.all)
-          }
+      ZStack {
+        if !isReduceTransparencyEnabled {
+          RandomShapeView()
+            .edgesIgnoringSafeArea(.all)
+        }
 
-          ScrollView {
-            MasonryLayout(
-              columns: dataStore.columnsCount(basedOn: proxy.size.width),
-              spacing: 12.0
-            ) {
-              ForEach(dataStore.sortedData) { item in
-                BubbleView(
-                  scale: dataStore.scale(for: item.id),
-                  count: dataStore.count(for: item.id)
-                ) {
-                  Label(
-                    LocalizedStringKey(item.localizationKey),
-                    systemImage: item.systemImage
-                  )
-                  .font(.system(.title3, design: .rounded, weight: .medium))
-                }
-                .environment(\.isEnabled, !isSortMenuOnScreen)
-              }
-            }
-            .padding()
-          }
-        }
-        .onTapGesture {
-          isSortMenuOnScreen = false
-        }
+        PrayersListView(sort: sortDescriptor)
+          .environment(\.isEnabled, !isSortMenuOnScreen)
+      }
+      .onTapGesture {
+        isSortMenuOnScreen = false
       }
       .toolbar {
         toolbar
       }
       .navigationTitle("Qadha Tracker")
-      .onChange(of: dataStore.sortType) {
-        #if os(iOS)
-        isSortMenuOnScreen = false
-        #endif
+    }
+    .onChange(of: dataStore.sortType, initial: true) { _, newValue in
+      #if os(iOS)
+      isSortMenuOnScreen = false
+      #endif
+
+      withAnimation(.bouncySpring) {
+        sortDescriptor = switch newValue {
+        case .ascending:
+          SortDescriptor(\.count, order: .forward)
+        case .descending:
+          SortDescriptor(\.count, order: .reverse)
+        case .default:
+          SortDescriptor(\.intrinsicOrder, order: .forward)
+        }
       }
     }
   }
 
   @ToolbarContentBuilder private var toolbar: some ToolbarContent {
     ToolbarItem(placement: isRunningOnWatch ? .bottomBar : .automatic) {
-      #if os(iOS)
+      #if os(iOS) || os(visionOS)
       Menu {
         sortPicker
           .pickerStyle(.inline)
@@ -100,10 +87,12 @@ struct ContentView: View {
     }
   }
 
-  private var sortPicker: some View {
+  @ViewBuilder private var sortPicker: some View {
+    @Bindable var store = dataStore
+
     Picker(
       "Sort",
-      selection: sortTypeBinding
+      selection: $store.sortType
     ) {
       Label(
         "Default",
@@ -124,5 +113,17 @@ struct ContentView: View {
       .tag(SortType.descending)
     }
     .sensoryFeedback(.levelChange, trigger: dataStore.sortType)
+  }
+}
+
+#Preview {
+  let container = DataController().previewContainer
+  let store = KeyValueStore()
+
+  return GeometryReader { proxy in
+    ContentView()
+      .environment(store)
+      .environment(\.mainWindowSize, proxy.size)
+      .modelContainer(container)
   }
 }

@@ -30,8 +30,12 @@
 		305556212BB899000002830F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556202BB899000002830F /* Utils.swift */; };
 		305556222BB899000002830F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556202BB899000002830F /* Utils.swift */; };
 		305556232BB8990C0002830F /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3055561E2BB87BEB0002830F /* Prayer.swift */; };
+		305556422BB8A6CE0002830F /* PrayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556412BB8A6CE0002830F /* PrayersListView.swift */; };
+		305556432BB8A6CE0002830F /* PrayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556412BB8A6CE0002830F /* PrayersListView.swift */; };
 		305556462BB8A77C0002830F /* Animation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556452BB8A77C0002830F /* Animation+Extensions.swift */; };
 		305556472BB8A77C0002830F /* Animation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556452BB8A77C0002830F /* Animation+Extensions.swift */; };
+		305556492BB8C5EE0002830F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556482BB8C5EE0002830F /* DataController.swift */; };
+		3055564A2BB8C5EE0002830F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556482BB8C5EE0002830F /* DataController.swift */; };
 		305A9EC42A66C139002221EE /* Faith Moon.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 305A9EB72A66C137002221EE /* Faith Moon.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3093A99E2B3EF09D00F28EE3 /* FaithMoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A011F2B3EE19800D9D40F /* FaithMoonApp.swift */; };
 		3093A9A02B3EF0A600F28EE3 /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01222B3EE19800D9D40F /* CloudStorage.swift */; };
@@ -106,7 +110,9 @@
 		302A013D2B3EE19800D9D40F /* FaithMoon Watch.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "FaithMoon Watch.entitlements"; sourceTree = "<group>"; };
 		3055561E2BB87BEB0002830F /* Prayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
 		305556202BB899000002830F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		305556412BB8A6CE0002830F /* PrayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersListView.swift; sourceTree = "<group>"; };
 		305556452BB8A77C0002830F /* Animation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Extensions.swift"; sourceTree = "<group>"; };
+		305556482BB8C5EE0002830F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		305A9EB72A66C137002221EE /* Faith Moon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faith Moon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3093A99D2B3EEFDE00F28EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		3093A9B32B3EF1C300F28EE3 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 				302A011F2B3EE19800D9D40F /* FaithMoonApp.swift */,
 				302A01252B3EE19800D9D40F /* Extensions */,
 				302A01202B3EE19800D9D40F /* Models */,
+				305556442BB8A6DE0002830F /* PrayersList */,
 				302A012C2B3EE19800D9D40F /* Supporting Files */,
 				302A01342B3EE19800D9D40F /* Views */,
 			);
@@ -152,6 +159,7 @@
 				302A01242B3EE19800D9D40F /* SortType.swift */,
 				302A01232B3EE19800D9D40F /* UserDefaultsKey.swift */,
 				3055561E2BB87BEB0002830F /* Prayer.swift */,
+				305556482BB8C5EE0002830F /* DataController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +227,14 @@
 				302A013C2B3EE19800D9D40F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		305556442BB8A6DE0002830F /* PrayersList */ = {
+			isa = PBXGroup;
+			children = (
+				305556412BB8A6CE0002830F /* PrayersListView.swift */,
+			);
+			path = PrayersList;
 			sourceTree = "<group>";
 		};
 		3093A99A2B3EEDE800F28EE3 /* Frameworks */ = {
@@ -387,11 +403,13 @@
 				3093A9B02B3EF0D600F28EE3 /* Bubble.swift in Sources */,
 				3093A9AE2B3EF0D600F28EE3 /* MasonryLayout.swift in Sources */,
 				3093A9A32B3EF0AC00F28EE3 /* Codable+Extensions.swift in Sources */,
+				3055564A2BB8C5EE0002830F /* DataController.swift in Sources */,
 				3093A9A02B3EF0A600F28EE3 /* CloudStorage.swift in Sources */,
 				3093A9AD2B3EF0D100F28EE3 /* ContentView.swift in Sources */,
 				305556232BB8990C0002830F /* Prayer.swift in Sources */,
 				3093A99E2B3EF09D00F28EE3 /* FaithMoonApp.swift in Sources */,
 				3093A9A82B3EF0AF00F28EE3 /* KeyValueStore.swift in Sources */,
+				305556432BB8A6CE0002830F /* PrayersListView.swift in Sources */,
 				305556222BB899000002830F /* Utils.swift in Sources */,
 				3093A9A52B3EF0AC00F28EE3 /* String+Extensions.swift in Sources */,
 				3093A9A42B3EF0AC00F28EE3 /* MainWindowSizeKey.swift in Sources */,
@@ -412,11 +430,13 @@
 				302A01512B3EE19800D9D40F /* MasonryLayout.swift in Sources */,
 				302A01502B3EE19800D9D40F /* PrayerCountEditorView.swift in Sources */,
 				302A01522B3EE19800D9D40F /* ContentView.swift in Sources */,
+				305556492BB8C5EE0002830F /* DataController.swift in Sources */,
 				302A01462B3EE19800D9D40F /* MainWindowSizeKey.swift in Sources */,
 				302A01412B3EE19800D9D40F /* UserDefaultsKey.swift in Sources */,
 				302A01402B3EE19800D9D40F /* CloudStorage.swift in Sources */,
 				302A01482B3EE19800D9D40F /* KeyValueStore.swift in Sources */,
 				302A014F2B3EE19800D9D40F /* RandomShapeView.swift in Sources */,
+				305556422BB8A6CE0002830F /* PrayersListView.swift in Sources */,
 				302A01442B3EE19800D9D40F /* Codable+Extensions.swift in Sources */,
 				305556212BB899000002830F /* Utils.swift in Sources */,
 				302A01472B3EE19800D9D40F /* SizePreference.swift in Sources */,
