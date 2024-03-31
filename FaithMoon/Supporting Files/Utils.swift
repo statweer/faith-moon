@@ -16,6 +16,14 @@ var isRunningOnWatch: Bool {
 #endif
 }
 
+var isRunningOnVision: Bool {
+#if os(visionOS)
+  return true
+#else
+  return false
+#endif
+}
+
 var isiOSAppRunningOnMac: Bool {
   ProcessInfo.processInfo.isiOSAppOnMac
 }

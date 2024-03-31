@@ -36,7 +36,7 @@
 		305556472BB8A77C0002830F /* Animation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556452BB8A77C0002830F /* Animation+Extensions.swift */; };
 		305556492BB8C5EE0002830F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556482BB8C5EE0002830F /* DataController.swift */; };
 		3055564A2BB8C5EE0002830F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556482BB8C5EE0002830F /* DataController.swift */; };
-		305A9EC42A66C139002221EE /* Faith Moon.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 305A9EB72A66C137002221EE /* Faith Moon.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		305A9EC42A66C139002221EE /* Faith Moon Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 305A9EB72A66C137002221EE /* Faith Moon Watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3093A99E2B3EF09D00F28EE3 /* FaithMoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A011F2B3EE19800D9D40F /* FaithMoonApp.swift */; };
 		3093A9A02B3EF0A600F28EE3 /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01222B3EE19800D9D40F /* CloudStorage.swift */; };
 		3093A9A12B3EF0A600F28EE3 /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01242B3EE19800D9D40F /* SortType.swift */; };
@@ -77,7 +77,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				305A9EC42A66C139002221EE /* Faith Moon.app in Embed Watch Content */,
+				305A9EC42A66C139002221EE /* Faith Moon Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,7 +113,7 @@
 		305556412BB8A6CE0002830F /* PrayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersListView.swift; sourceTree = "<group>"; };
 		305556452BB8A77C0002830F /* Animation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Extensions.swift"; sourceTree = "<group>"; };
 		305556482BB8C5EE0002830F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		305A9EB72A66C137002221EE /* Faith Moon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faith Moon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		305A9EB72A66C137002221EE /* Faith Moon Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faith Moon Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3093A99D2B3EEFDE00F28EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		3093A9B32B3EF1C300F28EE3 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		30A0F43629EB77E600FDA04E /* Faith Moon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faith Moon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				302A01392B3EE19800D9D40F /* ContentView.swift */,
-				302A012B2B3EE19800D9D40F /* KeyValueStore.swift */,
 				302A011F2B3EE19800D9D40F /* FaithMoonApp.swift */,
 				302A01252B3EE19800D9D40F /* Extensions */,
 				302A01202B3EE19800D9D40F /* Models */,
@@ -155,6 +154,7 @@
 		302A01202B3EE19800D9D40F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				302A012B2B3EE19800D9D40F /* KeyValueStore.swift */,
 				302A01222B3EE19800D9D40F /* CloudStorage.swift */,
 				302A01242B3EE19800D9D40F /* SortType.swift */,
 				302A01232B3EE19800D9D40F /* UserDefaultsKey.swift */,
@@ -258,7 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				30A0F43629EB77E600FDA04E /* Faith Moon.app */,
-				305A9EB72A66C137002221EE /* Faith Moon.app */,
+				305A9EB72A66C137002221EE /* Faith Moon Watch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,18 +280,18 @@
 			);
 			name = "FaithMoon Watch";
 			productName = "QadhaTrackerWatch Watch App";
-			productReference = 305A9EB72A66C137002221EE /* Faith Moon.app */;
+			productReference = 305A9EB72A66C137002221EE /* Faith Moon Watch.app */;
 			productType = "com.apple.product-type.application";
 		};
 		30A0F43529EB77E600FDA04E /* FaithMoon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30A0F44529EB77E700FDA04E /* Build configuration list for PBXNativeTarget "FaithMoon" */;
 			buildPhases = (
+				3072F13A29EB8A0500E47B7F /* SwiftLint */,
 				30A0F43229EB77E600FDA04E /* Sources */,
 				30A0F43329EB77E600FDA04E /* Frameworks */,
 				30A0F43429EB77E600FDA04E /* Resources */,
 				305A9EC82A66C139002221EE /* Embed Watch Content */,
-				3072F13A29EB8A0500E47B7F /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -453,6 +453,7 @@
 /* Begin PBXTargetDependency section */
 		3093A99C2B3EEDE800F28EE3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 305A9EB62A66C137002221EE /* FaithMoon Watch */;
 			targetProxy = 3093A99B2B3EEDE800F28EE3 /* PBXContainerItemProxy */;
 		};
@@ -479,6 +480,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID).watch";
+				PRODUCT_NAME = "$(PRODUCT_NAME) Watch";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -507,6 +509,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID).watch";
+				PRODUCT_NAME = "$(PRODUCT_NAME) Watch";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -681,13 +684,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
+				PRODUCT_NAME = "$(PRODUCT_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
@@ -721,13 +725,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
+				PRODUCT_NAME = "$(PRODUCT_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};

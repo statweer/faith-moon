@@ -17,21 +17,26 @@ struct PrayerCountEditorView<Content: View>: View {
       HStack {
         title()
 
-        #if os(iOS)
+        #if os(iOS) || os(visionOS)
         Spacer()
 
         Button {
           dismiss()
         } label: {
-          Image(systemName: "xmark.circle.fill")
-            .imageScale(.large)
-            .font(.system(.title3, design: .rounded, weight: .medium))
-            .tint(.primary.opacity(0.5))
-            .frame(minWidth: 44, minHeight: 44)
-            .buttonBorderShape(.automatic)
-            .containerShape(Rectangle())
+          Image(
+            systemName: isRunningOnVision ? "xmark" : "xmark.circle.fill"
+          )
+          .imageScale(isRunningOnVision ? .medium : .large)
+          .font(.system(.title3, design: .rounded, weight: .medium))
+          .tint(.primary.opacity(0.5))
+          .frame(
+            minWidth: isRunningOnVision ? nil : 44,
+            minHeight: isRunningOnVision ? nil : 44
+          )
         }
-        .contentShape(.hoverEffect, Circle())
+        .buttonBorderShape(.circle)
+        .contentShape(.interaction, .rect)
+        .contentShape(.hoverEffect, .circle)
         .hoverEffect()
         #endif
       }
@@ -109,7 +114,7 @@ extension FormatStyle where Self == RangeIntegerStyle {
 
 private extension View {
   func preferredTextFieldCharacteristics() -> some View {
-    #if os(iOS)
+    #if os(iOS) || os(visionOS)
     self
       .keyboardType(.asciiCapableNumberPad)
       .textFieldStyle(.roundedBorder)

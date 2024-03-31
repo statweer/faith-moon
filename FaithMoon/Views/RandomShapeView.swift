@@ -55,15 +55,13 @@ struct RandomShapeView: View {
   }
 
   private func blurredBackground() -> some ShapeStyle {
-    #if os(watchOS)
-    .thinMaterial
-    #else
-    if isiOSAppRunningOnMac {
-      return .ultraThickMaterial
+    if isRunningOnWatch {
+      return .thinMaterial
+    } else if colorScheme == .light {
+      return .regularMaterial
     } else {
-      return colorScheme == .light ? .regularMaterial : .thickMaterial
+      return .thickMaterial
     }
-    #endif
   }
 
   private func calculateShapes(using size: CGSize) {

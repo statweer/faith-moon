@@ -68,8 +68,9 @@ struct BubbleView<Content: View>: View {
       }
       .compositingGroup()
     }
-    .sensoryFeedback(.selection, trigger: isShowingStepper)
+    .preferredSelectionSensoryFeedback(trigger: isShowingStepper)
     .buttonStyle(.plain)
+    .buttonBorderShape(.roundedRectangle(radius: 16))
     .preferredContentShape()
     .preferredPopover(isPresented: $isShowingStepper) {
       VStack {
@@ -142,30 +143,26 @@ private extension Color {
 }
 
 private extension View {
+  @ViewBuilder
   func preferredContentShape() -> some View {
+    let shape = RoundedRectangle(
+      cornerRadius: 16.0,
+      style: .continuous
+    )
+
     #if os(iOS) || os(visionOS)
     self
-      .contentShape(
-        .hoverEffect,
-        RoundedRectangle(
-          cornerRadius: 16.0,
-          style: .continuous
-        )
-      )
+      .contentShape(.interaction, shape)
+      .contentShape(.hoverEffect, shape)
       .hoverEffect(.lift)
     #else
     self
-      .contentShape(
-        RoundedRectangle(
-          cornerRadius: 16.0,
-          style: .continuous
-        )
-      )
+      .contentShape(.interaction, shape)
     #endif
   }
 
   func preferredPopover<Content>(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) -> some View where Content: View {
-    #if os(iOS)
+    #if os(iOS) || os(visionOS)
     self.popover(isPresented: isPresented, content: content)
     #else
     self.sheet(isPresented: isPresented, content: content)

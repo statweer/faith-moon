@@ -22,10 +22,18 @@ struct FaithMoonApp: App {
           .environment(\.mainWindowSize, proxy.size)
       }
       .dynamicTypeSize(...DynamicTypeSize.accessibility1)
-      #if os(iOS)
-      .tint(Color(.accent))
-      #endif
+      .if(isRunningOnVision) {
+        $0.frame(
+          minWidth: 400,
+          maxWidth: .infinity,
+          minHeight: 400,
+          maxHeight: .infinity
+        )
+      }
     }
+    #if os(visionOS)
+    .windowResizability(.contentSize)
+    #endif
   }
 
   init() {

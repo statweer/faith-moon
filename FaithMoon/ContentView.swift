@@ -18,8 +18,10 @@ struct ContentView: View {
     NavigationStack {
       ZStack {
         if !isReduceTransparencyEnabled {
-          RandomShapeView()
-            .edgesIgnoringSafeArea(.all)
+          if !(isRunningOnVision || isiOSAppRunningOnMac) {
+            RandomShapeView()
+              .edgesIgnoringSafeArea(.all)
+          }
         }
 
         PrayersListView(sort: sortDescriptors)
@@ -68,7 +70,7 @@ struct ContentView: View {
       } label: {
         Label(
           "Sort",
-          systemImage: "arrow.up.arrow.down.circle"
+          systemImage: isRunningOnVision ? "arrow.up.arrow.down" : "arrow.up.arrow.down.circle"
         )
       }
       .onTapGesture {
@@ -120,7 +122,7 @@ struct ContentView: View {
       )
       .tag(SortType.descending)
     }
-    .sensoryFeedback(.levelChange, trigger: dataStore.sortType)
+    .preferredLevelChangeSensoryFeedback(trigger: dataStore.sortType)
   }
 }
 
