@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30A0F43529EB77E600FDA04E"
-               BuildableName = "FaithMoon.app"
+               BuildableName = "Faith Moon.app"
                BlueprintName = "FaithMoon"
                ReferencedContainer = "container:FaithMoon.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30A0F43529EB77E600FDA04E"
-            BuildableName = "FaithMoon.app"
+            BuildableName = "Faith Moon.app"
             BlueprintName = "FaithMoon"
             ReferencedContainer = "container:FaithMoon.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30A0F43529EB77E600FDA04E"
-            BuildableName = "FaithMoon.app"
+            BuildableName = "Faith Moon.app"
             BlueprintName = "FaithMoon"
             ReferencedContainer = "container:FaithMoon.xcodeproj">
          </BuildableReference>
