@@ -68,10 +68,6 @@ struct FaithMoonApp: App {
   #endif
 }
 
-var isRunningOnWatch: Bool {
-  #if os(watchOS)
-  return true
-  #else
-  return false
-  #endif
+    #endif
+  }
 }
