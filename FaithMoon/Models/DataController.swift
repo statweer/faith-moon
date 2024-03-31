@@ -86,7 +86,7 @@ extension ModelContainer {
 
 extension ModelContext {
   func cleanUpDuplicates(in prayers: [Prayer]) throws {
-    if prayers.count != Prayer.defaultValues.count {
+    if prayers.count == Prayer.defaultValues.count {
       return
     }
 
