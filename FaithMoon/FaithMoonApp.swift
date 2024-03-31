@@ -5,17 +5,20 @@
 //  Created by Saeed Taheri on 4/16/23.
 //
 
+import SwiftData
 import SwiftUI
 
 @main
 struct FaithMoonApp: App {
-  private let dataStore = DataStore()
+  private let keyValueStore = KeyValueStore()
+  private let modelContainer: ModelContainer
 
   var body: some Scene {
     WindowGroup {
       GeometryReader { proxy in
         ContentView()
-          .environment(dataStore)
+          .environment(keyValueStore)
+          .modelContainer(modelContainer)
           .environment(\.mainWindowSize, proxy.size)
       }
       .dynamicTypeSize(...DynamicTypeSize.accessibility1)
@@ -25,8 +28,16 @@ struct FaithMoonApp: App {
     }
   }
 
-  #if os(iOS)
   init() {
+    modelContainer = DataController().modelContainer
+    setUpNavigationBarAppearance()
+  }
+}
+
+private extension FaithMoonApp {
+  func setUpNavigationBarAppearance() {
+    #if os(iOS) || os(visionOS)
+
     let design = UIFontDescriptor.SystemDesign.rounded
 
     guard let titleDesc = UIFontDescriptor
@@ -64,9 +75,6 @@ struct FaithMoonApp: App {
     UINavigationBar.appearance().scrollEdgeAppearance = clearAppearance
     UINavigationBar.appearance().compactAppearance = appearance
     UINavigationBar.appearance().compactScrollEdgeAppearance = appearance
-  }
-  #endif
-}
 
     #endif
   }
