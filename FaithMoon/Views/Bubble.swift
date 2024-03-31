@@ -29,7 +29,7 @@ struct BubbleView<Content: View>: View {
     .red
   ]
 
-  @Binding var scale: CGFloat
+  var scale: CGFloat
   @Binding var count: Int
   var label: () -> Content
 
@@ -44,7 +44,7 @@ struct BubbleView<Content: View>: View {
         style: .continuous
       )
       .fill(colorForScale().gradient)
-      .shadow(color: colorForScale(), radius: 1.5 * scale)
+      .shadow(color: .black.opacity(0.3), radius: 2)
       .frame(height: BubbleViewConstants.minHeight * scale)
       .overlay(alignment: .topTrailing) {
         RoundedRectangle(cornerRadius: 16.0, style: .continuous)
@@ -66,9 +66,10 @@ struct BubbleView<Content: View>: View {
           .foregroundColor(.white)
           .shadow(color: .black.opacity(0.5), radius: 8)
       }
+      .compositingGroup()
     }
     .sensoryFeedback(.selection, trigger: isShowingStepper)
-    .buttonStyle(.borderless)
+    .buttonStyle(.plain)
     .preferredContentShape()
     .preferredPopover(isPresented: $isShowingStepper) {
       VStack {
@@ -101,7 +102,7 @@ private struct BubblePreview: View {
 
   var body: some View {
     BubbleView(
-      scale: $scale,
+      scale: scale,
       count: $count
     ) {
       Label("Maghrib", systemImage: "sunrise")
@@ -142,7 +143,7 @@ private extension Color {
 
 private extension View {
   func preferredContentShape() -> some View {
-    #if os(iOS)
+    #if os(iOS) || os(visionOS)
     self
       .contentShape(
         .hoverEffect,
