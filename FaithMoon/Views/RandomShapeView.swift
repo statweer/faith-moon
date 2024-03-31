@@ -58,7 +58,11 @@ struct RandomShapeView: View {
     #if os(watchOS)
     .thinMaterial
     #else
-    colorScheme == .light ? .regularMaterial : .thickMaterial
+    if isiOSAppRunningOnMac {
+      return .ultraThickMaterial
+    } else {
+      return colorScheme == .light ? .regularMaterial : .thickMaterial
+    }
     #endif
   }
 
@@ -74,7 +78,9 @@ struct RandomShapeView: View {
     ]
     let colors = RandomShapeView.createRandomColors(count: 5)
 
-    shapeViews = (0..<20).map { _ in
+    let numberOfShapes = Int(max(size.width, size.height)) / 45
+
+    shapeViews = (0..<numberOfShapes).map { _ in
       let shapeIndex = Int.random(in: 0..<shapes.count)
       let colorIndex = Int.random(in: 0..<colors.count)
       let color = colors[colorIndex]
