@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "305A9EB62A66C137002221EE"
-               BuildableName = "Faith Moon.app"
+               BuildableName = "Faith Moon Watch.app"
                BlueprintName = "FaithMoon Watch"
                ReferencedContainer = "container:FaithMoon.xcodeproj">
             </BuildableReference>

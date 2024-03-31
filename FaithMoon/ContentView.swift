@@ -17,7 +17,10 @@ struct ContentView: View {
   var body: some View {
     NavigationStack {
       ZStack {
-        if isiOS, !isReduceTransparencyEnabled {
+        if
+          isiOS || isRunningOnWatch,
+          !isiOSAppRunningOnMac,
+          !isReduceTransparencyEnabled {
           RandomShapeView()
             .edgesIgnoringSafeArea(.all)
         }
