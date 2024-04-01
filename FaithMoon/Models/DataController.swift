@@ -94,9 +94,9 @@ extension ModelContext {
 
     for item in prayers {
       if let existingItem = uniqueItems[item.id] {
-        if
-          let itemLastModified = item.lastModified,
-          let existingLastModified = existingItem.lastModified {
+        if let itemLastModified = item.lastModified {
+          let existingLastModified = existingItem.lastModified ?? .distantPast
+
           if itemLastModified > existingLastModified {
             uniqueItems[item.id] = item
           }
