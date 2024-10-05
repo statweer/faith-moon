@@ -85,7 +85,7 @@ struct PrayerCountEditorView<Content: View>: View {
 }
 
 struct RangeIntegerStrategy: ParseStrategy {
-  private static var numberFormatter: NumberFormatter = {
+  private static let numberFormatter: NumberFormatter = {
     let formatter = NumberFormatter()
     formatter.numberStyle = .none
     return formatter

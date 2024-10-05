@@ -80,7 +80,7 @@ extension Prayer {
 // MARK: - App Data
 
 extension Prayer {
-  static let defaultValues: [Prayer] = {
+  @MainActor static let defaultValues: [Prayer] = {
     [
       .init(
         slug: "fajr",
