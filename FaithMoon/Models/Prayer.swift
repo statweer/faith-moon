@@ -11,9 +11,9 @@ import SwiftData
 
 @Model
 final class Prayer: Identifiable {
-  let id = ""
-  let localizationKey = ""
-  let intrinsicOrder = -1
+  var id = ""
+  var localizationKey = ""
+  var intrinsicOrder = -1
   private(set) var count = 0
   private(set) var lastModified: Date?
 
