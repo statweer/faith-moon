@@ -3,121 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		302A013E2B3EE19800D9D40F /* FaithMoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A011F2B3EE19800D9D40F /* FaithMoonApp.swift */; };
-		302A01402B3EE19800D9D40F /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01222B3EE19800D9D40F /* CloudStorage.swift */; };
-		302A01412B3EE19800D9D40F /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01232B3EE19800D9D40F /* UserDefaultsKey.swift */; };
-		302A01422B3EE19800D9D40F /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01242B3EE19800D9D40F /* SortType.swift */; };
-		302A01432B3EE19800D9D40F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01262B3EE19800D9D40F /* String+Extensions.swift */; };
-		302A01442B3EE19800D9D40F /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01272B3EE19800D9D40F /* Codable+Extensions.swift */; };
-		302A01452B3EE19800D9D40F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01282B3EE19800D9D40F /* View+Extensions.swift */; };
-		302A01462B3EE19800D9D40F /* MainWindowSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01292B3EE19800D9D40F /* MainWindowSizeKey.swift */; };
-		302A01472B3EE19800D9D40F /* SizePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A012A2B3EE19800D9D40F /* SizePreference.swift */; };
-		302A01482B3EE19800D9D40F /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A012B2B3EE19800D9D40F /* KeyValueStore.swift */; };
-		302A01492B3EE19800D9D40F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 302A012D2B3EE19800D9D40F /* Localizable.xcstrings */; };
-		302A014A2B3EE19800D9D40F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 302A012E2B3EE19800D9D40F /* Settings.bundle */; };
-		302A014B2B3EE19800D9D40F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302A01302B3EE19800D9D40F /* Assets.xcassets */; };
-		302A014C2B3EE19800D9D40F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302A01322B3EE19800D9D40F /* Preview Assets.xcassets */; };
-		302A014E2B3EE19800D9D40F /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01352B3EE19800D9D40F /* Bubble.swift */; };
-		302A014F2B3EE19800D9D40F /* RandomShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01362B3EE19800D9D40F /* RandomShapeView.swift */; };
-		302A01502B3EE19800D9D40F /* PrayerCountEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01372B3EE19800D9D40F /* PrayerCountEditorView.swift */; };
-		302A01512B3EE19800D9D40F /* MasonryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01382B3EE19800D9D40F /* MasonryLayout.swift */; };
-		302A01522B3EE19800D9D40F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01392B3EE19800D9D40F /* ContentView.swift */; };
-		3055561F2BB87BEB0002830F /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3055561E2BB87BEB0002830F /* Prayer.swift */; };
-		305556212BB899000002830F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556202BB899000002830F /* Utils.swift */; };
-		305556222BB899000002830F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556202BB899000002830F /* Utils.swift */; };
-		305556232BB8990C0002830F /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3055561E2BB87BEB0002830F /* Prayer.swift */; };
-		305556422BB8A6CE0002830F /* PrayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556412BB8A6CE0002830F /* PrayersListView.swift */; };
-		305556432BB8A6CE0002830F /* PrayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556412BB8A6CE0002830F /* PrayersListView.swift */; };
-		305556462BB8A77C0002830F /* Animation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556452BB8A77C0002830F /* Animation+Extensions.swift */; };
-		305556472BB8A77C0002830F /* Animation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556452BB8A77C0002830F /* Animation+Extensions.swift */; };
-		305556492BB8C5EE0002830F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556482BB8C5EE0002830F /* DataController.swift */; };
-		3055564A2BB8C5EE0002830F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305556482BB8C5EE0002830F /* DataController.swift */; };
-		305A9EC42A66C139002221EE /* Faith Moon Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 305A9EB72A66C137002221EE /* Faith Moon Watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3093A99E2B3EF09D00F28EE3 /* FaithMoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A011F2B3EE19800D9D40F /* FaithMoonApp.swift */; };
-		3093A9A02B3EF0A600F28EE3 /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01222B3EE19800D9D40F /* CloudStorage.swift */; };
-		3093A9A12B3EF0A600F28EE3 /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01242B3EE19800D9D40F /* SortType.swift */; };
-		3093A9A22B3EF0A600F28EE3 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01232B3EE19800D9D40F /* UserDefaultsKey.swift */; };
-		3093A9A32B3EF0AC00F28EE3 /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01272B3EE19800D9D40F /* Codable+Extensions.swift */; };
-		3093A9A42B3EF0AC00F28EE3 /* MainWindowSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01292B3EE19800D9D40F /* MainWindowSizeKey.swift */; };
-		3093A9A52B3EF0AC00F28EE3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01262B3EE19800D9D40F /* String+Extensions.swift */; };
-		3093A9A62B3EF0AC00F28EE3 /* SizePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A012A2B3EE19800D9D40F /* SizePreference.swift */; };
-		3093A9A72B3EF0AC00F28EE3 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01282B3EE19800D9D40F /* View+Extensions.swift */; };
-		3093A9A82B3EF0AF00F28EE3 /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A012B2B3EE19800D9D40F /* KeyValueStore.swift */; };
-		3093A9A92B3EF0B400F28EE3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 302A012D2B3EE19800D9D40F /* Localizable.xcstrings */; };
-		3093A9AA2B3EF0BD00F28EE3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 302A012E2B3EE19800D9D40F /* Settings.bundle */; };
-		3093A9AB2B3EF0C500F28EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302A01302B3EE19800D9D40F /* Assets.xcassets */; };
-		3093A9AD2B3EF0D100F28EE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01392B3EE19800D9D40F /* ContentView.swift */; };
-		3093A9AE2B3EF0D600F28EE3 /* MasonryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01382B3EE19800D9D40F /* MasonryLayout.swift */; };
-		3093A9AF2B3EF0D600F28EE3 /* PrayerCountEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01372B3EE19800D9D40F /* PrayerCountEditorView.swift */; };
-		3093A9B02B3EF0D600F28EE3 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01352B3EE19800D9D40F /* Bubble.swift */; };
-		3093A9B12B3EF0D600F28EE3 /* RandomShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A01362B3EE19800D9D40F /* RandomShapeView.swift */; };
-		3093A9B22B3EF0DB00F28EE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302A013C2B3EE19800D9D40F /* Preview Assets.xcassets */; };
-		3093A9B42B3EF1C300F28EE3 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3093A9B32B3EF1C300F28EE3 /* InfoPlist.xcstrings */; };
-		3093A9B52B3EF1C300F28EE3 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3093A9B32B3EF1C300F28EE3 /* InfoPlist.xcstrings */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3093A99B2B3EEDE800F28EE3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 30A0F42E29EB77E600FDA04E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 305A9EB62A66C137002221EE;
-			remoteInfo = "FaithMoon Watch";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		305A9EC82A66C139002221EE /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				305A9EC42A66C139002221EE /* Faith Moon Watch.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		302A011F2B3EE19800D9D40F /* FaithMoonApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaithMoonApp.swift; sourceTree = "<group>"; };
-		302A01222B3EE19800D9D40F /* CloudStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudStorage.swift; sourceTree = "<group>"; };
-		302A01232B3EE19800D9D40F /* UserDefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
-		302A01242B3EE19800D9D40F /* SortType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortType.swift; sourceTree = "<group>"; };
-		302A01262B3EE19800D9D40F /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		302A01272B3EE19800D9D40F /* Codable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+Extensions.swift"; sourceTree = "<group>"; };
-		302A01282B3EE19800D9D40F /* View+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
-		302A01292B3EE19800D9D40F /* MainWindowSizeKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowSizeKey.swift; sourceTree = "<group>"; };
-		302A012A2B3EE19800D9D40F /* SizePreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizePreference.swift; sourceTree = "<group>"; };
-		302A012B2B3EE19800D9D40F /* KeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
-		302A012D2B3EE19800D9D40F /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		302A012E2B3EE19800D9D40F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		302A012F2B3EE19800D9D40F /* FaithMoon.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = FaithMoon.entitlements; sourceTree = "<group>"; };
-		302A01302B3EE19800D9D40F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		302A01322B3EE19800D9D40F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		302A01332B3EE19800D9D40F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		302A01352B3EE19800D9D40F /* Bubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
-		302A01362B3EE19800D9D40F /* RandomShapeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomShapeView.swift; sourceTree = "<group>"; };
-		302A01372B3EE19800D9D40F /* PrayerCountEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerCountEditorView.swift; sourceTree = "<group>"; };
-		302A01382B3EE19800D9D40F /* MasonryLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasonryLayout.swift; sourceTree = "<group>"; };
-		302A01392B3EE19800D9D40F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		302A013C2B3EE19800D9D40F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		302A013D2B3EE19800D9D40F /* FaithMoon Watch.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "FaithMoon Watch.entitlements"; sourceTree = "<group>"; };
-		3055561E2BB87BEB0002830F /* Prayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
-		305556202BB899000002830F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		305556412BB8A6CE0002830F /* PrayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersListView.swift; sourceTree = "<group>"; };
-		305556452BB8A77C0002830F /* Animation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Extensions.swift"; sourceTree = "<group>"; };
-		305556482BB8C5EE0002830F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		305A9EB72A66C137002221EE /* Faith Moon Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faith Moon Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3093A99D2B3EEFDE00F28EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
-		3093A9B32B3EF1C300F28EE3 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		30A0F43629EB77E600FDA04E /* Faith Moon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faith Moon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		30342DF22E776D1C007A0DEC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Supporting Files/Info.plist",
+			);
+			target = 30A0F43529EB77E600FDA04E /* FaithMoon */;
+		};
+		30342DF32E776D1C007A0DEC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Supporting Files/Info.plist",
+				"Supporting Files/Preview Content/Preview Assets.xcassets",
+			);
+			target = 305A9EB62A66C137002221EE /* FaithMoon Watch */;
+		};
+		30342DFC2E776D8D007A0DEC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Preview Content/Preview Assets.xcassets",
+			);
+			target = 305A9EB62A66C137002221EE /* FaithMoon Watch */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		30342DBD2E776D1C007A0DEC /* FaithMoon */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (30342DF22E776D1C007A0DEC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 30342DF32E776D1C007A0DEC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = FaithMoon; sourceTree = "<group>"; };
+		30342DFA2E776D8D007A0DEC /* FaithMoon Watch */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (30342DFC2E776D8D007A0DEC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "FaithMoon Watch"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		305A9EB42A66C137002221EE /* Frameworks */ = {
@@ -137,107 +59,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		302A011E2B3EE19800D9D40F /* FaithMoon */ = {
-			isa = PBXGroup;
-			children = (
-				302A01392B3EE19800D9D40F /* ContentView.swift */,
-				302A011F2B3EE19800D9D40F /* FaithMoonApp.swift */,
-				302A01252B3EE19800D9D40F /* Extensions */,
-				302A01202B3EE19800D9D40F /* Models */,
-				305556442BB8A6DE0002830F /* PrayersList */,
-				302A012C2B3EE19800D9D40F /* Supporting Files */,
-				302A01342B3EE19800D9D40F /* Views */,
-			);
-			path = FaithMoon;
-			sourceTree = "<group>";
-		};
-		302A01202B3EE19800D9D40F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				302A012B2B3EE19800D9D40F /* KeyValueStore.swift */,
-				302A01222B3EE19800D9D40F /* CloudStorage.swift */,
-				302A01242B3EE19800D9D40F /* SortType.swift */,
-				302A01232B3EE19800D9D40F /* UserDefaultsKey.swift */,
-				3055561E2BB87BEB0002830F /* Prayer.swift */,
-				305556482BB8C5EE0002830F /* DataController.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		302A01252B3EE19800D9D40F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				305556452BB8A77C0002830F /* Animation+Extensions.swift */,
-				302A01272B3EE19800D9D40F /* Codable+Extensions.swift */,
-				302A01292B3EE19800D9D40F /* MainWindowSizeKey.swift */,
-				302A012A2B3EE19800D9D40F /* SizePreference.swift */,
-				302A01262B3EE19800D9D40F /* String+Extensions.swift */,
-				302A01282B3EE19800D9D40F /* View+Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		302A012C2B3EE19800D9D40F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				302A012E2B3EE19800D9D40F /* Settings.bundle */,
-				302A012F2B3EE19800D9D40F /* FaithMoon.entitlements */,
-				302A01332B3EE19800D9D40F /* Info.plist */,
-				305556202BB899000002830F /* Utils.swift */,
-				302A01302B3EE19800D9D40F /* Assets.xcassets */,
-				3093A9B32B3EF1C300F28EE3 /* InfoPlist.xcstrings */,
-				302A012D2B3EE19800D9D40F /* Localizable.xcstrings */,
-				302A01312B3EE19800D9D40F /* Preview Content */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		302A01312B3EE19800D9D40F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				302A01322B3EE19800D9D40F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		302A01342B3EE19800D9D40F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				302A01352B3EE19800D9D40F /* Bubble.swift */,
-				302A01382B3EE19800D9D40F /* MasonryLayout.swift */,
-				302A01372B3EE19800D9D40F /* PrayerCountEditorView.swift */,
-				302A01362B3EE19800D9D40F /* RandomShapeView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		302A013A2B3EE19800D9D40F /* FaithMoon Watch */ = {
-			isa = PBXGroup;
-			children = (
-				3093A99D2B3EEFDE00F28EE3 /* Info.plist */,
-				302A013B2B3EE19800D9D40F /* Preview Content */,
-				302A013D2B3EE19800D9D40F /* FaithMoon Watch.entitlements */,
-			);
-			path = "FaithMoon Watch";
-			sourceTree = "<group>";
-		};
-		302A013B2B3EE19800D9D40F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				302A013C2B3EE19800D9D40F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		305556442BB8A6DE0002830F /* PrayersList */ = {
-			isa = PBXGroup;
-			children = (
-				305556412BB8A6CE0002830F /* PrayersListView.swift */,
-			);
-			path = PrayersList;
-			sourceTree = "<group>";
-		};
-		3093A99A2B3EEDE800F28EE3 /* Frameworks */ = {
+		30342DFE2E776FD3007A0DEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -247,9 +69,9 @@
 		30A0F42D29EB77E600FDA04E = {
 			isa = PBXGroup;
 			children = (
-				302A011E2B3EE19800D9D40F /* FaithMoon */,
-				302A013A2B3EE19800D9D40F /* FaithMoon Watch */,
-				3093A99A2B3EEDE800F28EE3 /* Frameworks */,
+				30342DBD2E776D1C007A0DEC /* FaithMoon */,
+				30342DFA2E776D8D007A0DEC /* FaithMoon Watch */,
+				30342DFE2E776FD3007A0DEC /* Frameworks */,
 				30A0F43729EB77E600FDA04E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -278,6 +100,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				30342DBD2E776D1C007A0DEC /* FaithMoon */,
+			);
 			name = "FaithMoon Watch";
 			productName = "QadhaTrackerWatch Watch App";
 			productReference = 305A9EB72A66C137002221EE /* Faith Moon Watch.app */;
@@ -291,12 +116,13 @@
 				30A0F43229EB77E600FDA04E /* Sources */,
 				30A0F43329EB77E600FDA04E /* Frameworks */,
 				30A0F43429EB77E600FDA04E /* Resources */,
-				305A9EC82A66C139002221EE /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3093A99C2B3EEDE800F28EE3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				30342DBD2E776D1C007A0DEC /* FaithMoon */,
 			);
 			name = FaithMoon;
 			productName = "Qadha Tracker";
@@ -311,7 +137,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 2600;
 				ORGANIZATIONNAME = "Saeed Tatweer IT Services Est.";
 				TargetAttributes = {
 					305A9EB62A66C137002221EE = {
@@ -349,11 +175,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3093A9AA2B3EF0BD00F28EE3 /* Settings.bundle in Resources */,
-				3093A9B52B3EF1C300F28EE3 /* InfoPlist.xcstrings in Resources */,
-				3093A9B22B3EF0DB00F28EE3 /* Preview Assets.xcassets in Resources */,
-				3093A9AB2B3EF0C500F28EE3 /* Assets.xcassets in Resources */,
-				3093A9A92B3EF0B400F28EE3 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,11 +182,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				302A014C2B3EE19800D9D40F /* Preview Assets.xcassets in Resources */,
-				3093A9B42B3EF1C300F28EE3 /* InfoPlist.xcstrings in Resources */,
-				302A014A2B3EE19800D9D40F /* Settings.bundle in Resources */,
-				302A014B2B3EE19800D9D40F /* Assets.xcassets in Resources */,
-				302A01492B3EE19800D9D40F /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,26 +214,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				305556472BB8A77C0002830F /* Animation+Extensions.swift in Sources */,
-				3093A9AF2B3EF0D600F28EE3 /* PrayerCountEditorView.swift in Sources */,
-				3093A9B02B3EF0D600F28EE3 /* Bubble.swift in Sources */,
-				3093A9AE2B3EF0D600F28EE3 /* MasonryLayout.swift in Sources */,
-				3093A9A32B3EF0AC00F28EE3 /* Codable+Extensions.swift in Sources */,
-				3055564A2BB8C5EE0002830F /* DataController.swift in Sources */,
-				3093A9A02B3EF0A600F28EE3 /* CloudStorage.swift in Sources */,
-				3093A9AD2B3EF0D100F28EE3 /* ContentView.swift in Sources */,
-				305556232BB8990C0002830F /* Prayer.swift in Sources */,
-				3093A99E2B3EF09D00F28EE3 /* FaithMoonApp.swift in Sources */,
-				3093A9A82B3EF0AF00F28EE3 /* KeyValueStore.swift in Sources */,
-				305556432BB8A6CE0002830F /* PrayersListView.swift in Sources */,
-				305556222BB899000002830F /* Utils.swift in Sources */,
-				3093A9A52B3EF0AC00F28EE3 /* String+Extensions.swift in Sources */,
-				3093A9A42B3EF0AC00F28EE3 /* MainWindowSizeKey.swift in Sources */,
-				3093A9A62B3EF0AC00F28EE3 /* SizePreference.swift in Sources */,
-				3093A9A12B3EF0A600F28EE3 /* SortType.swift in Sources */,
-				3093A9B12B3EF0D600F28EE3 /* RandomShapeView.swift in Sources */,
-				3093A9A72B3EF0AC00F28EE3 /* View+Extensions.swift in Sources */,
-				3093A9A22B3EF0A600F28EE3 /* UserDefaultsKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,39 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				305556462BB8A77C0002830F /* Animation+Extensions.swift in Sources */,
-				3055561F2BB87BEB0002830F /* Prayer.swift in Sources */,
-				302A01512B3EE19800D9D40F /* MasonryLayout.swift in Sources */,
-				302A01502B3EE19800D9D40F /* PrayerCountEditorView.swift in Sources */,
-				302A01522B3EE19800D9D40F /* ContentView.swift in Sources */,
-				305556492BB8C5EE0002830F /* DataController.swift in Sources */,
-				302A01462B3EE19800D9D40F /* MainWindowSizeKey.swift in Sources */,
-				302A01412B3EE19800D9D40F /* UserDefaultsKey.swift in Sources */,
-				302A01402B3EE19800D9D40F /* CloudStorage.swift in Sources */,
-				302A01482B3EE19800D9D40F /* KeyValueStore.swift in Sources */,
-				302A014F2B3EE19800D9D40F /* RandomShapeView.swift in Sources */,
-				305556422BB8A6CE0002830F /* PrayersListView.swift in Sources */,
-				302A01442B3EE19800D9D40F /* Codable+Extensions.swift in Sources */,
-				305556212BB899000002830F /* Utils.swift in Sources */,
-				302A01472B3EE19800D9D40F /* SizePreference.swift in Sources */,
-				302A014E2B3EE19800D9D40F /* Bubble.swift in Sources */,
-				302A01422B3EE19800D9D40F /* SortType.swift in Sources */,
-				302A01432B3EE19800D9D40F /* String+Extensions.swift in Sources */,
-				302A01452B3EE19800D9D40F /* View+Extensions.swift in Sources */,
-				302A013E2B3EE19800D9D40F /* FaithMoonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3093A99C2B3EEDE800F28EE3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilter = ios;
-			target = 305A9EB62A66C137002221EE /* FaithMoon Watch */;
-			targetProxy = 3093A99B2B3EEDE800F28EE3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		305A9EC62A66C139002221EE /* Debug */ = {
@@ -468,10 +235,9 @@
 				CODE_SIGN_ENTITLEMENTS = "FaithMoon Watch/FaithMoon Watch.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FaithMoon Watch/Preview Content\"";
-				DEVELOPMENT_TEAM = FABZJ3JQTT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = "FaithMoon Watch/Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "$(BUNDLE_ID)";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -496,10 +262,9 @@
 				CODE_SIGN_ENTITLEMENTS = "FaithMoon Watch/FaithMoon Watch.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FaithMoon Watch/Preview Content\"";
-				DEVELOPMENT_TEAM = FABZJ3JQTT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = "FaithMoon Watch/Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "$(BUNDLE_ID)";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -520,6 +285,7 @@
 		30A0F44329EB77E700FDA04E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_ID = com.statweer.faithmoon;
@@ -556,6 +322,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = FABZJ3JQTT;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -582,6 +349,8 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Faith Moon";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_STRICT_CONCURRENCY = complete;
@@ -593,6 +362,7 @@
 		30A0F44429EB77E700FDA04E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_ID = com.statweer.faithmoon;
@@ -629,6 +399,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = FABZJ3JQTT;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -648,6 +419,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "Faith Moon";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_STRICT_CONCURRENCY = complete;
@@ -666,7 +439,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"FaithMoon/Supporting Files/Preview Content\"";
-				DEVELOPMENT_TEAM = FABZJ3JQTT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -705,7 +477,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"FaithMoon/Supporting Files/Preview Content\"";
-				DEVELOPMENT_TEAM = FABZJ3JQTT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
