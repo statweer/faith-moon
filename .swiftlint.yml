@@ -2,6 +2,12 @@ excluded:
   - ${PWD}/Carthage
   - ${PWD}/Pods
   - ${PWD}/DerivedData
+  - ${PWD}/build
+  - ${PWD}/.build
+  - "**/*.build/**"
+  - "**/DerivedSources/**"
+  - "**/GeneratedAssetSymbols.swift"
+  - "**/GeneratedStringSymbols*.swift"
 
 disabled_rules:
   - discarded_notification_center_observer
