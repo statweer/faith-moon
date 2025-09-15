@@ -30,9 +30,6 @@ struct FaithMoonApp: App {
           maxHeight: .infinity
         )
       }
-      .if(isiOS) {
-        $0.tint(.accent)
-      }
     }
     #if os(visionOS)
     .windowResizability(.contentSize)

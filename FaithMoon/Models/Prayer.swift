@@ -64,16 +64,7 @@ extension Prayer: Hashable {
 
 extension Prayer {
   var systemImage: String {
-    switch localizationKey {
-    case "Fajr": "sunrise"
-    case "Dhuhr": "sun.max"
-    case "Asr": "sun.dust"
-    case "Maghrib": "sunset"
-    case "Isha": "moon"
-    case "Ayat": "tropicalstorm"
-    case "Ramadan Fast": "sparkles"
-    default: "laurel.leading"
-    }
+    Self.systemImage(for: localizationKey)
   }
 }
 

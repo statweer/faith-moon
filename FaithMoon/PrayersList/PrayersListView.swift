@@ -102,6 +102,18 @@ private extension PrayersListView {
       }?.count ?? 0
     } set: { newValue in
       if let index = prayers.firstIndex(where: { $0.id == id }) {
+        let prayer = prayers[index]
+        let previousCount = prayer.count
+
+        if previousCount != newValue {
+          let log = PrayerLog(
+            prayerName: prayer.localizationKey,
+            previousCount: previousCount,
+            newCount: newValue
+          )
+          context.insert(log)
+        }
+
         prayers[index].update(\.count, to: newValue)
         setNeedsScaleUpdate = UUID()
       }

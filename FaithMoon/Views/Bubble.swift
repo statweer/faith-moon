@@ -84,10 +84,7 @@ struct BubbleView<Content: View>: View {
       }
       .padding()
       .presentationDetents([.fraction(0.2)])
-      .presentationCornerRadius(20)
-      .presentationDragIndicator(.visible)
       .presentationBackgroundInteraction(.enabled)
-      .presentationBackground(isRunningOnWatch ? .ultraThinMaterial : .thickMaterial)
       .presentationCompactAdaptation(.sheet)
     }
   }

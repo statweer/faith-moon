@@ -63,6 +63,12 @@ struct ContentView: View {
   }
 
   @ToolbarContentBuilder private var toolbar: some ToolbarContent {
+    ToolbarItem(placement: .navigation) {
+      NavigationLink(destination: LogView()) {
+        Label("History", systemImage: "clock")
+      }
+    }
+
     ToolbarItem(placement: isRunningOnWatch ? .bottomBar : .automatic) {
       #if os(iOS) || os(visionOS)
       Menu {
@@ -71,7 +77,7 @@ struct ContentView: View {
       } label: {
         Label(
           "Sort",
-          systemImage: isRunningOnVision ? "arrow.up.arrow.down" : "arrow.up.arrow.down.circle"
+          systemImage: "arrow.up.arrow.down"
         )
       }
       .onTapGesture {

@@ -13,7 +13,7 @@ import SwiftData
 @MainActor
 final class DataController {
   private(set) lazy var modelContainer: ModelContainer = {
-    let schema = Schema([Prayer.self])
+    let schema = Schema([Prayer.self, PrayerLog.self])
     let modelConfiguration = ModelConfiguration(
       "qadha-prayers",
       schema: schema,
@@ -39,7 +39,7 @@ final class DataController {
   private(set) lazy var previewContainer: ModelContainer = {
     do {
       let config = ModelConfiguration(isStoredInMemoryOnly: true)
-      let container = try ModelContainer(for: Prayer.self, configurations: config)
+      let container = try ModelContainer(for: Prayer.self, PrayerLog.self, configurations: config)
 
       container.insertAppDefaultData()
 
