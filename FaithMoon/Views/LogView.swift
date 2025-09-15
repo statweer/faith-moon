@@ -38,6 +38,7 @@ struct LogView: View {
                 }
                 .tint(.red)
               }
+            #if os(iOS) || os(visionOS)
               .contextMenu {
                 Button(role: .destructive) {
                   deleteLog(log)
@@ -45,6 +46,7 @@ struct LogView: View {
                   Label("Delete Entry", systemImage: "trash")
                 }
               }
+            #endif
           }
         }
       }
@@ -107,9 +109,11 @@ struct LogRowView: View {
             .frame(width: imageSize, height: imageSize)
 
           Text(LocalizedStringKey(log.prayerName))
+          #if os(iOS) || os(visionOS)
             .alignmentGuide(.listRowSeparatorLeading) { dimen in
               dimen[.leading]
             }
+          #endif
         }
         .font(.system(.headline, design: .rounded, weight: .medium))
 

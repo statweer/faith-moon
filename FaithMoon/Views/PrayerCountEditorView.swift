@@ -17,9 +17,9 @@ struct PrayerCountEditorView<Content: View>: View {
       HStack {
         title()
 
-        #if os(iOS) || os(visionOS)
         Spacer()
 
+        #if os(visionOS)
         Button {
           dismiss()
         } label: {
@@ -28,7 +28,7 @@ struct PrayerCountEditorView<Content: View>: View {
           )
           .imageScale(isRunningOnVision ? .medium : .large)
           .font(.system(.title3, design: .rounded, weight: .medium))
-          .tint(.primary.opacity(0.5))
+          .tint(.primary.opacity(0.3))
           .frame(
             minWidth: isRunningOnVision ? nil : 44,
             minHeight: isRunningOnVision ? nil : 44

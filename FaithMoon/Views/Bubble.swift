@@ -54,7 +54,7 @@ struct BubbleView<Content: View>: View {
             Text(count, format: .number)
               .frame(width: 30, height: 30)
               .font(.system(size: 22, weight: .bold, design: .monospaced))
-              .foregroundColor(.white)
+              .foregroundStyle(.white)
               .minimumScaleFactor(0.5)
               .environment(\.locale, Locale(identifier: "en_US"))
           }
@@ -65,7 +65,7 @@ struct BubbleView<Content: View>: View {
       .overlay(alignment: .bottomLeading) {
         label()
           .padding(8)
-          .foregroundColor(.white)
+          .foregroundStyle(.white)
           .shadow(color: .black.opacity(0.5), radius: 8)
       }
       .compositingGroup()
@@ -75,17 +75,12 @@ struct BubbleView<Content: View>: View {
     .buttonBorderShape(.roundedRectangle(radius: 16))
     .preferredContentShape()
     .preferredPopover(isPresented: $isShowingStepper) {
-      VStack {
-        PrayerCountEditorView(value: $count) {
-          label()
-            .foregroundColor(.primary)
-        }
-        Spacer()
+      PrayerCountEditorView(value: $count) {
+        label()
+          .foregroundStyle(.primary)
       }
       .padding()
-      .presentationDetents([.fraction(0.2)])
-      .presentationBackgroundInteraction(.enabled)
-      .presentationCompactAdaptation(.sheet)
+      .frame(maxHeight: .infinity, alignment: .top)
     }
   }
 
@@ -109,7 +104,7 @@ private struct BubblePreview: View {
         .padding(12)
         .font(.system(.title3, design: .rounded, weight: .medium))
         .shadow(color: .black.opacity(0.5), radius: 8)
-        .foregroundColor(.white)
+        .foregroundStyle(.white)
     }
   }
 }
@@ -162,7 +157,10 @@ private extension View {
 
   func preferredPopover<Content>(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) -> some View where Content: View {
     #if os(iOS) || os(visionOS)
-    self.popover(isPresented: isPresented, content: content)
+    self.popover(isPresented: isPresented) {
+      content()
+        .presentationCompactAdaptation(.popover)
+    }
     #else
     self.sheet(isPresented: isPresented, content: content)
     #endif

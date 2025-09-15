@@ -62,12 +62,22 @@ struct ContentView: View {
     }
   }
 
-  @ToolbarContentBuilder private var toolbar: some ToolbarContent {
-    ToolbarItem(placement: .navigation) {
-      NavigationLink(destination: LogView()) {
-        Label("History", systemImage: "clock")
-      }
+  private var historyNavigation: some View {
+    NavigationLink(destination: LogView()) {
+      Label("History", systemImage: "clock")
     }
+  }
+
+  @ToolbarContentBuilder private var toolbar: some ToolbarContent {
+    #if !os(watchOS)
+    ToolbarItem(placement: .navigation) {
+      historyNavigation
+    }
+    #else
+    ToolbarItem(placement: .automatic) {
+      historyNavigation
+    }
+    #endif
 
     ToolbarItem(placement: isRunningOnWatch ? .bottomBar : .automatic) {
       #if os(iOS) || os(visionOS)
