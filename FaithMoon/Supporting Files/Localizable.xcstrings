@@ -483,6 +483,35 @@
         }
       }
     },
+    "just_now" : {
+      "comment" : "Date shown for very recent changes",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الآن"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Just now"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "همین الان"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şimdi"
+          }
+        }
+      }
+    },
     "Maghrib" : {
       "localizations" : {
         "ar" : {

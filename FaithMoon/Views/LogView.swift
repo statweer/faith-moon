@@ -38,7 +38,7 @@ struct LogView: View {
                 }
                 .tint(.red)
               }
-            #if os(iOS) || os(visionOS)
+              #if os(iOS) || os(visionOS)
               .contextMenu {
                 Button(role: .destructive) {
                   deleteLog(log)
@@ -46,7 +46,7 @@ struct LogView: View {
                   Label("Delete Entry", systemImage: "trash")
                 }
               }
-            #endif
+              #endif
           }
         }
       }
@@ -100,42 +100,49 @@ struct LogRowView: View {
   private var imageSize: CGFloat = 24
 
   var body: some View {
-    VStack(alignment: .leading) {
-      HStack {
-        HStack(spacing: imageSize / 3.0) {
-          Image(systemName: Prayer.systemImage(for: log.prayerName))
-            .resizable()
-            .scaledToFit()
-            .frame(width: imageSize, height: imageSize)
+    TimelineView(.animation(minimumInterval: 10)) { timeline in
+      VStack(alignment: .leading) {
+        HStack {
+          HStack(spacing: imageSize / 3.0) {
+            Image(systemName: Prayer.systemImage(for: log.prayerName))
+              .resizable()
+              .scaledToFit()
+              .frame(width: imageSize, height: imageSize)
 
-          Text(LocalizedStringKey(log.prayerName))
-          #if os(iOS) || os(visionOS)
-            .alignmentGuide(.listRowSeparatorLeading) { dimen in
-              dimen[.leading]
-            }
-          #endif
+            Text(LocalizedStringKey(log.prayerName))
+              #if os(iOS) || os(visionOS)
+              .alignmentGuide(.listRowSeparatorLeading) { dimen in
+                dimen[.leading]
+              }
+              #endif
+          }
+          .font(.system(.headline, design: .rounded, weight: .medium))
+
+          Spacer()
+
+
+          Text(log.formattedChangeAmount)
+            .font(.system(.body, design: .monospaced, weight: .semibold))
+            .foregroundStyle(log.isIncrease ? .red : (log.isDecrease ? .green : .secondary))
         }
-        .font(.system(.headline, design: .rounded, weight: .medium))
 
-        Spacer()
+        HStack {
+          Text("\(log.previousCount) → \(log.newCount)")
+            .font(.system(.subheadline, design: .monospaced))
+            .foregroundStyle(.secondary)
+            .padding(.leading, imageSize * 4.0 / 3.0)
 
+          Spacer()
 
-        Text(log.formattedChangeAmount)
-          .font(.system(.body, design: .monospaced, weight: .semibold))
-          .foregroundStyle(log.isIncrease ? .red : (log.isDecrease ? .green : .secondary))
-      }
-
-      HStack {
-        Text("\(log.previousCount) → \(log.newCount)")
-          .font(.system(.subheadline, design: .monospaced))
-          .foregroundStyle(.secondary)
-          .padding(.leading, imageSize * 4.0 / 3.0)
-
-        Spacer()
-
-        Text(log.changeDate, style: .relative)
+          Text(
+            log.changeDate.formatted(
+              .intelligent(relativeTo: timeline.date)
+            )
+          )
           .font(.caption)
           .foregroundStyle(.tertiary)
+          .contentTransition(.numericText())
+        }
       }
     }
   }
