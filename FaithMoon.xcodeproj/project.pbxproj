@@ -6,6 +6,34 @@
 	objectVersion = 70;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		305C49A12E7F11EC00C0F8BE /* Faith Moon Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 305A9EB72A66C137002221EE /* Faith Moon Watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		305C49A22E7F11EC00C0F8BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30A0F42E29EB77E600FDA04E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 305A9EB62A66C137002221EE;
+			remoteInfo = "FaithMoon Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		305C49A42E7F11EC00C0F8BE /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				305C49A12E7F11EC00C0F8BE /* Faith Moon Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		305A9EB72A66C137002221EE /* Faith Moon Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faith Moon Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A0F43629EB77E600FDA04E /* Faith Moon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faith Moon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,10 +144,12 @@
 				30A0F43229EB77E600FDA04E /* Sources */,
 				30A0F43329EB77E600FDA04E /* Frameworks */,
 				30A0F43429EB77E600FDA04E /* Resources */,
+				305C49A42E7F11EC00C0F8BE /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				305C49A32E7F11EC00C0F8BE /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				30342DBD2E776D1C007A0DEC /* FaithMoon */,
@@ -226,6 +256,15 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		305C49A32E7F11EC00C0F8BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 305A9EB62A66C137002221EE /* FaithMoon Watch */;
+			targetProxy = 305C49A22E7F11EC00C0F8BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		305A9EC62A66C139002221EE /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -239,7 +278,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FaithMoon Watch/Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "$(BUNDLE_ID)";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -266,7 +304,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FaithMoon Watch/Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "$(BUNDLE_ID)";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -285,7 +322,7 @@
 		30A0F44329EB77E700FDA04E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_ID = com.statweer.faithmoon;
@@ -362,7 +399,7 @@
 		30A0F44429EB77E700FDA04E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_ID = com.statweer.faithmoon;
