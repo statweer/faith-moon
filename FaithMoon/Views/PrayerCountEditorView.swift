@@ -9,6 +9,8 @@ struct PrayerCountEditorView<Content: View>: View {
   @Binding var value: Int
   var title: () -> Content
 
+  @State private var textFieldValue: Int = 0
+
   var body: some View {
     VStack(
       alignment: .leading,
@@ -51,7 +53,7 @@ struct PrayerCountEditorView<Content: View>: View {
           Text(value, format: .ranged(0...Int.max))
         } else {
           TextField(
-            value: $value,
+            value: $textFieldValue,
             format: .ranged(0...Int.max),
             prompt: Text("How many Qadha?")
           ) {
@@ -60,8 +62,28 @@ struct PrayerCountEditorView<Content: View>: View {
           .font(.title3.monospaced().bold())
           .preferredTextFieldCharacteristics()
           .onSubmit {
+            value = textFieldValue
             isFocused = false
           }
+          .onChange(of: isFocused) { _, newValue in
+            if !newValue {
+              value = textFieldValue
+            }
+          }
+          #if os(iOS)
+          .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+              HStack {
+                Spacer()
+                Button(role: .confirm) {
+                  value = textFieldValue
+                  isFocused = false
+                }
+              }
+              .padding(.bottom)
+            }
+          }
+          #endif
         }
       } onEditingChanged: { success in
         if success {
@@ -71,6 +93,14 @@ struct PrayerCountEditorView<Content: View>: View {
         }
       }
       .focused($isFocused)
+    }
+    .onAppear {
+      textFieldValue = value
+    }
+    .onChange(of: value) { _, newValue in
+      if !isFocused {
+        textFieldValue = newValue
+      }
     }
   }
 }
@@ -116,7 +146,7 @@ private extension View {
   func preferredTextFieldCharacteristics() -> some View {
     #if os(iOS) || os(visionOS)
     self
-      .keyboardType(.asciiCapableNumberPad)
+      .keyboardType(.numberPad)
       .textFieldStyle(.roundedBorder)
     #else
     self
