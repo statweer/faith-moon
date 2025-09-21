@@ -25,6 +25,7 @@ final class Prayer: Identifiable {
     self.id = slug
     self.localizationKey = localizationKey
     self.intrinsicOrder = intrinsicOrder
+    self.lastModified = .distantPast
   }
 
   func update<T>(
@@ -85,7 +86,7 @@ extension Prayer {
       .init(
         slug: "fajr",
         localizationKey: "Fajr",
-        intrinsicOrder: 10
+        intrinsicOrder: 10,
       ),
       .init(
         slug: "duhr",
