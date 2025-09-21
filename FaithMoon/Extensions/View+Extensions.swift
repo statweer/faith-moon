@@ -8,18 +8,6 @@
 import SwiftUI
 
 extension View {
-  func readSize(onChange: @escaping (CGSize) -> Void) -> some View {
-    background(
-      GeometryReader { geometryProxy in
-        Color.clear
-          .preference(key: SizePreferenceKey.self, value: geometryProxy.size)
-      }
-    )
-    .onPreferenceChange(SizePreferenceKey.self, perform: onChange)
-  }
-}
-
-extension View {
   func preferredImpactSensoryFeedback(trigger: some Equatable) -> some View {
     #if os(iOS) || os(watchOS)
     sensoryFeedback(.impact, trigger: trigger)

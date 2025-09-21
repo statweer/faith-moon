@@ -17,12 +17,9 @@ struct ContentView: View {
   var body: some View {
     NavigationStack {
       ZStack {
-        if
-          isiOS || isRunningOnWatch,
-          !isiOSAppRunningOnMac,
-          !isReduceTransparencyEnabled {
-          RandomShapeView()
-            .edgesIgnoringSafeArea(.all)
+        if !isReduceTransparencyEnabled {
+          MeshGradientBackgroundView()
+            .ignoresSafeArea(.all)
         }
 
         PrayersListView(sort: sortDescriptors)
@@ -147,10 +144,7 @@ struct ContentView: View {
   let container = DataController().previewContainer
   let store = KeyValueStore()
 
-  return GeometryReader { proxy in
-    ContentView()
-      .environment(store)
-      .environment(\.mainWindowSize, proxy.size)
-      .modelContainer(container)
-  }
+  return ContentView()
+    .environment(store)
+    .modelContainer(container)
 }

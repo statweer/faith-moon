@@ -18,16 +18,14 @@ struct PrayersListView: View {
 
   private var sort: [SortDescriptor<Prayer>]
 
-  @Environment(\.mainWindowSize)
-  private var windowSize
-
+  @State private var viewWidth: CGFloat = 0
   @State private var scales: [Prayer.ID: CGFloat] = [:]
   @State private var setNeedsScaleUpdate = UUID()
 
   var body: some View {
     ScrollView {
       MasonryLayout(
-        columns: columnsCount(basedOn: windowSize.width),
+        columns: columnsCount(basedOn: viewWidth),
         spacing: 12.0
       ) {
         ForEach(prayers) { item in
@@ -44,6 +42,9 @@ struct PrayersListView: View {
         }
       }
       .padding()
+    }
+    .onGeometryChange(for: CGFloat.self, of: \.size.width) { newValue in
+      viewWidth = newValue
     }
     .onChange(of: prayers, initial: true) { _, newValue in
       calculateScales(basedOn: newValue)

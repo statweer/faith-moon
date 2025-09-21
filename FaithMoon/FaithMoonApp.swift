@@ -16,13 +16,10 @@ struct FaithMoonApp: App {
 
   var body: some Scene {
     WindowGroup {
-      GeometryReader { proxy in
-        ContentView()
-          .environment(keyValueStore)
-          .modelContainer(modelContainer)
-          .environment(\.mainWindowSize, proxy.size)
-      }
-      .dynamicTypeSize(...DynamicTypeSize.accessibility1)
+      ContentView()
+        .environment(keyValueStore)
+        .modelContainer(modelContainer)
+        .dynamicTypeSize(...DynamicTypeSize.accessibility1)
       .if(isRunningOnVision) {
         $0.frame(
           minWidth: 400,
