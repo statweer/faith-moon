@@ -45,6 +45,15 @@ final class Prayer: Identifiable {
 
     update(keyPath: referenced, to: value)
   }
+
+  func updateCount(to newCount: Int) {
+    count = newCount
+    lastModified = .now
+  }
+
+  var isEmpty: Bool {
+    count == 0 // swiftlint:disable:this empty_count
+  }
 }
 
 extension Prayer: Equatable {
@@ -64,7 +73,7 @@ extension Prayer: Hashable {
 
 extension Prayer {
   var systemImage: String {
-    Self.systemImage(for: localizationKey)
+    Self.systemImage(for: id)
   }
 }
 

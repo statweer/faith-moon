@@ -9,15 +9,15 @@
 import Foundation
 
 extension Prayer {
-  static func systemImage(for prayerName: String) -> String {
-    switch prayerName {
-    case "Fajr": "sunrise"
-    case "Dhuhr": "sun.max"
-    case "Asr": "sun.dust"
-    case "Maghrib": "sunset"
-    case "Isha": "moon"
-    case "Ayat": "tropicalstorm"
-    case "Ramadan Fast": "sparkles"
+  static func systemImage(for prayerID: String) -> String {
+    switch prayerID.lowercased() {
+    case "fajr": "sunrise"
+    case "duhr", "dhuhr": "sun.max"
+    case "asr": "sun.dust"
+    case "maghrib": "sunset"
+    case "isha": "moon"
+    case "ayat": "tropicalstorm"
+    case "ramadan-fast", "ramadan fast": "sparkles"
     default: "laurel.leading"
     }
   }

@@ -12,23 +12,33 @@ import SwiftData
 @Model
 final class PrayerLog {
   var id = UUID()
-  var prayerName: String = ""
+  var prayerID: String = ""
   var previousCount: Int = 0
   var newCount: Int = 0
   var changeDate = Date.now
   var changeAmount: Int = 0
 
   init(
-    prayerName: String,
+    prayerID: String,
     previousCount: Int,
     newCount: Int,
     changeDate: Date = .now
   ) {
-    self.prayerName = prayerName
+    self.prayerID = prayerID
     self.previousCount = previousCount
     self.newCount = newCount
     self.changeDate = changeDate
     self.changeAmount = newCount - previousCount
+  }
+
+  init(
+    prayerID: String,
+    changedAmount: Int,
+    changeDate: Date = .now
+  ) {
+    self.prayerID = prayerID
+    self.changeAmount = changedAmount
+    self.changeDate = changeDate
   }
 }
 

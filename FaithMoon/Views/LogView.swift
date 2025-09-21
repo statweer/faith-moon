@@ -99,17 +99,29 @@ struct LogRowView: View {
   @ScaledMetric(relativeTo: .headline)
   private var imageSize: CGFloat = 24
 
+  private var prayer: Prayer? {
+    DataController.shared.fetchPrayer(withID: log.prayerID)
+  }
+
+  private var prayerLocalizationKey: String {
+    prayer?.localizationKey ?? ""
+  }
+
+  private var prayerID: String {
+    log.prayerID
+  }
+
   var body: some View {
     TimelineView(.animation(minimumInterval: 10)) { timeline in
       VStack(alignment: .leading) {
         HStack {
           HStack(spacing: imageSize / 3.0) {
-            Image(systemName: Prayer.systemImage(for: log.prayerName))
+            Image(systemName: Prayer.systemImage(for: prayerID))
               .resizable()
               .scaledToFit()
               .frame(width: imageSize, height: imageSize)
 
-            Text(LocalizedStringKey(log.prayerName))
+            Text(LocalizedStringKey(prayerLocalizationKey))
               #if os(iOS) || os(visionOS)
               .alignmentGuide(.listRowSeparatorLeading) { dimen in
                 dimen[.leading]

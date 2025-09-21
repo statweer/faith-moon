@@ -25,7 +25,8 @@ final class DataController {
       try createApplicationSupportDirectory()
 
       let container = try ModelContainer(
-        for: schema,
+        for: Prayer.self, PrayerLog.self, // swiftlint:disable:this multiline_arguments
+        migrationPlan: FaithMoonMigrationPlan.self,
         configurations: modelConfiguration
       )
 
@@ -62,6 +63,37 @@ final class DataController {
           withIntermediateDirectories: true
         )
       }
+    }
+  }
+}
+
+extension DataController {
+  func fetchPrayers() -> [Prayer] {
+    let context = modelContainer.mainContext
+    let descriptor = FetchDescriptor<Prayer>(
+      sortBy: [SortDescriptor(\.intrinsicOrder)]
+    )
+
+    do {
+      return try context.fetch(descriptor)
+    } catch {
+      return []
+    }
+  }
+
+  func fetchPrayer(withID id: String) -> Prayer? {
+    let context = modelContainer.mainContext
+    var descriptor = FetchDescriptor<Prayer>(
+      predicate: #Predicate { prayer in
+        prayer.id == id
+      }
+    )
+    descriptor.fetchLimit = 1
+
+    do {
+      return try context.fetch(descriptor).first
+    } catch {
+      return nil
     }
   }
 }

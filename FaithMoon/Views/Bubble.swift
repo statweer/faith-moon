@@ -2,7 +2,7 @@ import SwiftUI
 
 enum BubbleViewConstants {
   static let minHeight: CGFloat = isRunningOnWatch ? 90 : 120
-  static let maxHeight: CGFloat = isRunningOnWatch ? 280 : 360
+  static let maxHeight: CGFloat = isRunningOnWatch ? 180 : 320
 
   static var ratio: CGFloat {
     maxHeight / minHeight
@@ -10,30 +10,19 @@ enum BubbleViewConstants {
 }
 
 struct BubbleView<Content: View>: View {
-  private let colorPalette: [Color] = [
-    .green,
-    .green.interpolate(to: .yellow, at: 0.2),
-    .green.interpolate(to: .yellow, at: 0.4),
-    .green.interpolate(to: .yellow, at: 0.6),
-    .green.interpolate(to: .yellow, at: 0.8),
-    .yellow,
-    .yellow.interpolate(to: .orange, at: 0.2),
-    .yellow.interpolate(to: .orange, at: 0.4),
-    .yellow.interpolate(to: .orange, at: 0.6),
-    .yellow.interpolate(to: .orange, at: 0.8),
-    .orange,
-    .orange.interpolate(to: .red, at: 0.2),
-    .orange.interpolate(to: .red, at: 0.4),
-    .orange.interpolate(to: .red, at: 0.6),
-    .orange.interpolate(to: .red, at: 0.8),
-    .red
-  ]
-
-  var scale: CGFloat
   @Binding var count: Int
+  var scale: CGFloat?
   var label: () -> Content
 
   @State private var isShowingStepper = false
+
+  private var effectiveScale: CGFloat {
+    scale ?? BubbleColorPalette.scale(for: count)
+  }
+
+  private var bubbleColor: Color {
+    BubbleColorPalette.color(for: count)
+  }
 
   var body: some View {
     Button {
@@ -43,9 +32,9 @@ struct BubbleView<Content: View>: View {
         cornerRadius: 16.0,
         style: .continuous
       )
-      .fill(colorForScale().gradient)
+      .fill(bubbleColor.gradient)
       .shadow(color: .black.opacity(0.3), radius: 2)
-      .frame(height: BubbleViewConstants.minHeight * scale)
+      .frame(height: BubbleViewConstants.minHeight * effectiveScale)
       .overlay(alignment: .topTrailing) {
         RoundedRectangle(cornerRadius: 16.0, style: .continuous)
           .strokeBorder(.white, lineWidth: 3)
@@ -83,21 +72,13 @@ struct BubbleView<Content: View>: View {
       .frame(maxHeight: .infinity, alignment: .top)
     }
   }
-
-  private func colorForScale() -> Color {
-    let fraction = (scale - 1.0) / (BubbleViewConstants.ratio - 1.0)
-    let index = min(Int(fraction * CGFloat(colorPalette.count)), colorPalette.count - 1)
-    return colorPalette[index]
-  }
 }
 
 private struct BubblePreview: View {
-  @State private var scale: CGFloat = 1.0
   @State private var count = 0
 
   var body: some View {
     BubbleView(
-      scale: scale,
       count: $count
     ) {
       Label("Maghrib", systemImage: "sunrise")
@@ -113,28 +94,6 @@ private struct BubblePreview: View {
   BubblePreview()
 }
 
-private extension Color {
-  func interpolate(to color: Color, at fraction: Double) -> Color {
-    var fromHue: CGFloat = 0
-    var fromSaturation: CGFloat = 0
-    var fromBrightness: CGFloat = 0
-    var fromOpacity: CGFloat = 0
-    var toHue: CGFloat = 0
-    var toSaturation: CGFloat = 0
-    var toBrightness: CGFloat = 0
-    var toOpacity: CGFloat = 0
-
-    UIColor(self).getHue(&fromHue, saturation: &fromSaturation, brightness: &fromBrightness, alpha: &fromOpacity)
-    UIColor(color).getHue(&toHue, saturation: &toSaturation, brightness: &toBrightness, alpha: &toOpacity)
-
-    let hue = fromHue + CGFloat(fraction) * (toHue - fromHue)
-    let saturation = fromSaturation + CGFloat(fraction) * (toSaturation - fromSaturation)
-    let brightness = fromBrightness + CGFloat(fraction) * (toBrightness - fromBrightness)
-    let opacity = fromOpacity + CGFloat(fraction) * (toOpacity - fromOpacity)
-
-    return Color(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: opacity))
-  }
-}
 
 private extension View {
   @ViewBuilder

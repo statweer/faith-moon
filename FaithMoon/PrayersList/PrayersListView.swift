@@ -32,8 +32,8 @@ struct PrayersListView: View {
       ) {
         ForEach(prayers) { item in
           BubbleView(
-            scale: scales[item.id] ?? 1.0,
-            count: count(for: item.id)
+            count: count(for: item.id),
+            scale: scales[item.id] ?? 1.0
           ) {
             Label(
               LocalizedStringKey(item.localizationKey),
@@ -107,7 +107,7 @@ private extension PrayersListView {
 
         if previousCount != newValue {
           let log = PrayerLog(
-            prayerName: prayer.localizationKey,
+            prayerID: prayer.id,
             previousCount: previousCount,
             newCount: newValue
           )
@@ -124,7 +124,7 @@ private extension PrayersListView {
     var result: [Prayer.ID: CGFloat] = [:]
 
     models.forEach {
-      result[$0.id] = max(1.0, min(CGFloat($0.count) * 0.1 + 1.0, BubbleViewConstants.ratio))
+      result[$0.id] = BubbleColorPalette.scale(for: $0.count)
     }
 
     if result != scales {

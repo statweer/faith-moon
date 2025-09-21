@@ -5,6 +5,7 @@
 //  Created by Saeed Taheri on 4/16/23.
 //
 
+import AppIntents
 import SwiftData
 import SwiftUI
 
@@ -37,8 +38,9 @@ struct FaithMoonApp: App {
   }
 
   init() {
-    modelContainer = DataController().modelContainer
+    modelContainer = DataController.shared.modelContainer
     setUpNavigationBarAppearance()
+    FaithMoonShortcuts.updateAppShortcutParameters()
   }
 }
 
