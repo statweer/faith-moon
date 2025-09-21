@@ -12,12 +12,13 @@ import SwiftData
 
 @MainActor
 final class DataController {
+  static let shared = DataController()
   private(set) lazy var modelContainer: ModelContainer = {
-    let schema = Schema([Prayer.self, PrayerLog.self])
     let modelConfiguration = ModelConfiguration(
       "qadha-prayers",
-      schema: schema,
-      isStoredInMemoryOnly: false
+      isStoredInMemoryOnly: false,
+      groupContainer: .identifier(appGroupIdentifier),
+      cloudKitDatabase: .automatic
     )
 
     do {
