@@ -12,22 +12,28 @@ struct IntelligentDateFormatStyle: FormatStyle {
   typealias FormatInput = Date
   typealias FormatOutput = String
 
+  var locale: Locale
+  var calendar: Calendar
+
   func format(_ value: Date) -> String {
-    let calendar = Calendar.current
     let sameYear = calendar.component(.year, from: value) == calendar.component(.year, from: Date.now)
 
     if sameYear {
       return value.formatted(
-        .dateTime.weekday(.abbreviated).day().month(.abbreviated).hour().minute()
+        Date.FormatStyle(locale: locale, calendar: calendar)
+          .weekday(.abbreviated).day().month(.abbreviated).hour().minute()
       )
     } else {
       return value.formatted(
-        .dateTime.weekday(.abbreviated).day().month(.abbreviated).year().hour().minute()
+        Date.FormatStyle(locale: locale, calendar: calendar)
+          .weekday(.abbreviated).day().month(.abbreviated).year().hour().minute()
       )
     }
   }
 }
 
 extension FormatStyle where Self == IntelligentDateFormatStyle {
-  static var intelligent: IntelligentDateFormatStyle { IntelligentDateFormatStyle() }
+  static func intelligent(locale: Locale, calendar: Calendar) -> IntelligentDateFormatStyle {
+    IntelligentDateFormatStyle(locale: locale, calendar: calendar)
+  }
 }

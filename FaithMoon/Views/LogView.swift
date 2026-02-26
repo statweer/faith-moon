@@ -96,6 +96,9 @@ struct LogView: View {
 struct LogRowView: View {
   let log: PrayerLog
 
+  @Environment(\.locale) private var locale
+  @Environment(\.calendar) private var calendar
+
   @ScaledMetric(relativeTo: .headline)
   private var imageSize: CGFloat = 24
 
@@ -139,13 +142,14 @@ struct LogRowView: View {
 
       HStack {
         Text("\(log.previousCount) → \(log.newCount)")
+          .environment(\.locale, Locale(identifier: "en_US"))
           .font(.system(.subheadline, design: .monospaced))
           .foregroundStyle(.secondary)
           .padding(.leading, imageSize * 4.0 / 3.0)
 
         Spacer()
 
-        Text(log.changeDate.formatted(.intelligent))
+        Text(log.changeDate.formatted(.intelligent(locale: locale, calendar: calendar)))
           .font(.caption)
           .foregroundStyle(.tertiary)
       }

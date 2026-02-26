@@ -14,6 +14,19 @@ struct FaithMoonApp: App {
   private let keyValueStore = KeyValueStore()
   private let modelContainer: ModelContainer
 
+  /// Returns the appropriate locale based on app language.
+  /// If Persian (fa), uses fa_IR with Persian calendar and numerals. Otherwise uses device locale.
+  private var appLocale: Locale {
+    let languageCode = Locale.current.language.languageCode?.identifier
+    return languageCode == "fa"
+      ? Locale(identifier: "fa_IR@calendar=persian;numbers=arabext")
+      : .current
+  }
+
+  private var appCalendar: Calendar {
+    appLocale.calendar
+  }
+
   var body: some Scene {
     WindowGroup {
       ContentView()
@@ -29,6 +42,8 @@ struct FaithMoonApp: App {
         )
       }
     }
+    .environment(\.locale, appLocale)
+    .environment(\.calendar, appCalendar)
     #if os(visionOS)
     .windowResizability(.contentSize)
     #endif
