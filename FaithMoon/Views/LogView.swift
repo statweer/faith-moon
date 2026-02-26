@@ -112,49 +112,42 @@ struct LogRowView: View {
   }
 
   var body: some View {
-    TimelineView(.animation(minimumInterval: 10)) { timeline in
-      VStack(alignment: .leading) {
-        HStack {
-          HStack(spacing: imageSize / 3.0) {
-            Image(systemName: Prayer.systemImage(for: prayerID))
-              .resizable()
-              .scaledToFit()
-              .frame(width: imageSize, height: imageSize)
+    VStack(alignment: .leading) {
+      HStack {
+        HStack(spacing: imageSize / 3.0) {
+          Image(systemName: Prayer.systemImage(for: prayerID))
+            .resizable()
+            .scaledToFit()
+            .frame(width: imageSize, height: imageSize)
 
-            Text(LocalizedStringKey(prayerLocalizationKey))
-              #if os(iOS) || os(visionOS)
-              .alignmentGuide(.listRowSeparatorLeading) { dimen in
-                dimen[.leading]
-              }
-              #endif
-          }
-          .font(.system(.headline, design: .rounded, weight: .medium))
-
-          Spacer()
-
-
-          Text(log.formattedChangeAmount)
-            .font(.system(.body, design: .monospaced, weight: .semibold))
-            .foregroundStyle(log.isIncrease ? .red : (log.isDecrease ? .green : .secondary))
+          Text(LocalizedStringKey(prayerLocalizationKey))
+            #if os(iOS) || os(visionOS)
+            .alignmentGuide(.listRowSeparatorLeading) { dimen in
+              dimen[.leading]
+            }
+            #endif
         }
+        .font(.system(.headline, design: .rounded, weight: .medium))
 
-        HStack {
-          Text("\(log.previousCount) → \(log.newCount)")
-            .font(.system(.subheadline, design: .monospaced))
-            .foregroundStyle(.secondary)
-            .padding(.leading, imageSize * 4.0 / 3.0)
+        Spacer()
 
-          Spacer()
 
-          Text(
-            log.changeDate.formatted(
-              .intelligent(relativeTo: timeline.date)
-            )
-          )
+        Text(log.formattedChangeAmount)
+          .font(.system(.body, design: .monospaced, weight: .semibold))
+          .foregroundStyle(log.isIncrease ? .red : (log.isDecrease ? .green : .secondary))
+      }
+
+      HStack {
+        Text("\(log.previousCount) → \(log.newCount)")
+          .font(.system(.subheadline, design: .monospaced))
+          .foregroundStyle(.secondary)
+          .padding(.leading, imageSize * 4.0 / 3.0)
+
+        Spacer()
+
+        Text(log.changeDate.formatted(.intelligent))
           .font(.caption)
           .foregroundStyle(.tertiary)
-          .contentTransition(.numericText())
-        }
       }
     }
   }
